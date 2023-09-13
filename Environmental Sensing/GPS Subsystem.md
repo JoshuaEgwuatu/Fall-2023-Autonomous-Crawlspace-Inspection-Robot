@@ -153,19 +153,19 @@ We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concur
 
 
 # Buildable Schematics
-## CAD models
+## 3D Model
 ![GPS Dimensions copy](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/6e8e4859-ac41-4840-bfed-8bfedc6d6107)
 
-## Electrical Schematics
+## Electrical Schematic
 ![gps-sch](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/d29ad344-5e5c-4b88-953b-4b3c92c0469d)
 
 
 # BOM
 | Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
 | ---           |     ---             |          ---               |      ---        |     ---        |    ---   |  ---      |  ---  |
-| GPS           |GPS & Compass Module |  GPS subsystem             | M10Q-5883 GNSS  | rotorriot      |    1     |39.99$     |39.99$ |
-| Arduino Nano  |ATmega328            |  GPS subsystem             | A000005         | Arduino        |    1     |24.90$     |24.90$ |
-|               |                     |                            |                 |Total Components|    2     |Total Cost |64.89$ |
+| GPS           |GPS & Compass Module |  GPS subsystem             | M10Q-5883 GNSS  | rotorriot      |    1     |$39.99     |39.99$ |
+| Arduino Nano  |ATmega328            |  GPS subsystem             | A000005         | Arduino        |    1     |$24.90     |$24.90 |
+|               |                     |                            |                 |Total Components|    2     |Total Cost |$64.89 |
 
 # References
 
