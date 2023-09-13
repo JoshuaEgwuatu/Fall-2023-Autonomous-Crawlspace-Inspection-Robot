@@ -52,13 +52,12 @@ $95-265 W$ for Galileo,
 $130-185 W$ for BeiDou-2. 
 <br>
 <br>
-The path loss $(PL)$ can be determined using the Friis transmission equation:
-$PL = 20log10(d) + 20log10(f) - 147.55$
+The path loss $(PL)$ :   Friis transmission equation: $PL = 20log10(d) + 20log10(f) - 147.55$
+
 <br>
-Where the $d$ is Distance between the receiver and the satellites = propagation time x radio wave speed
+ $d$ Distance between the receiver and the satellites = propagation time x radio wave speed
 <br>
-- Convert the received signal power from $dBm$ to $Watts$: $Ptx = 10^((-125 - 30) / 10) = 0.1$ $fWatt$
-- the antenna gains (considering an omnidirectional antenna): $Gtx = Grx = 0$ $dBi$
+- Converting the received signal power from $dBm$ to $Watts$: $Ptx = 10^((-125 - 30) / 10) = 0.1$ $fWatt$
 - $wavelength (λ)$: $λ = c / f = 299,792,458 m/s / (1575.42 MHz) = 0.190293 m$
 - Friis transmission equation to find the $distance (d)$ : $d = λ / (4π) * 10^((Ptx - Prx + Gtx + Grx) / 20)$
    $= 0.190293 m / (4π) * 10^((0.1 - (-125) + 0 + 0) / 20)$
@@ -187,3 +186,6 @@ https://rotorriot.com/products/m10q-5883-gnss-gps-compass-module
 https://oceanservice.noaa.gov/education/tutorial_geodesy/geo09_gps.html
 
 https://www.gnssplanning.com/#/settings
+https://www.e-education.psu.edu/geog862/node/1874
+https://en.wikipedia.org/wiki/Friis_transmission_equation
+https://rotorriot.com/products/m10q-5883-gnss-gps-compass-module
