@@ -41,11 +41,8 @@ $P_r$ is a received signal power, which represents the strength of the signal re
 <br>
 
 $P_t$ is transmitted signal power, which represents the power of the signal transmitted by the satellites. 
-
 <br>
-
 For GPS, total L-band transmit power levels of $50-240 W$, 
-
 <br>
 
 $20-135 W$ for GLONASS
