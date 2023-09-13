@@ -152,7 +152,11 @@ We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concur
 
 # Buildable Schematics
 ## CAD models
+![GPS Dimensions copy](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/6e8e4859-ac41-4840-bfed-8bfedc6d6107)
+
 ## Electrical Schematics
+![gps-sch](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/d29ad344-5e5c-4b88-953b-4b3c92c0469d)
+
 
 # BOM
 | Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
