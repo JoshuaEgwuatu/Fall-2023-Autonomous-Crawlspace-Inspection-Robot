@@ -28,9 +28,7 @@ Third constraint that we need to considered is environmental constraints. Enviro
 | 3  |Shall account for environmental constraints, including signal blockage or degradation                                        | 
 
 # Analysis 
-
 In situations where there are obstacles obstructing the line of sight between the GPS module and the satellites, the limited sky visibility can result in weaker GPS signals and a decrease in signal-to-noise ratio (SNR). We are using the Log-normal Shadowing Model, which considers the distance between the GPS module and the obstacles, allowing for the quantification of signal attenuation caused by the obstacles. 
-
 <br>
 <br>
 The Log-normal Shadowing Model: $P_r = P_t - PL – X$
