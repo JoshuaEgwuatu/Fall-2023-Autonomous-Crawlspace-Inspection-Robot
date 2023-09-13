@@ -191,5 +191,6 @@ https://www.e-education.psu.edu/geog862/node/1874
 
 https://en.wikipedia.org/wiki/Friis_transmission_equation
 
+
 https://rotorriot.com/products/m10q-5883-gnss-gps-compass-module
 
