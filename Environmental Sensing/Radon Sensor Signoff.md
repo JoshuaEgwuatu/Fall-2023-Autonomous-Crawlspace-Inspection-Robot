@@ -48,6 +48,7 @@ Considering that the robot is powered by corded electricity, such a low power co
 
 ## Data Communication: 
 The sensor will communicate with the Arduino Nano through the UART.
+
 ![Capture](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/8c94b023-226e-47b6-a670-f79a3ce60f19)
 
 # Buildable Schematics
