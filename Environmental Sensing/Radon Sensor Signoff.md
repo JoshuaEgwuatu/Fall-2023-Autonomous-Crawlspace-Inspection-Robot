@@ -11,10 +11,8 @@ The Radon Eye RD200 was selected by the team due to its compact and lightweight 
 
 # Constraints:
 
-1. One important constraint is Sensor Accuracy and Reliability. The radon sensor is crucial for accurately detecting and measuring radon levels. It must provide precise readings to effectively assess the concentration of radon gas.
-
-2. Another constraint is Power Consumption. The radon sensor should use minimal power to ensure the robot operates efficiently and its battery lasts longer. It should be designed to work below 5 Volts (V) input voltage to optimize power usage.
-
+1. Shall provide precise readings to assess the concentration of radon gas effectively.
+2. The radon sensor shall use minimal power to ensure the robot operates efficiently and its battery lasts longer.
 3. Size and Weight is also a consideration. The radon sensor needs to be compact and lightweight so that it can easily be integrated into the robot. This allows the robot to maintain its mobility and functionality, even in small crawl space areas.
 
 The Integration Complexity, while connecting the Radon Eye RD200 is relatively simple, integrating the sensor into the robot's data collection and processing system may pose challenges. It is important to carefully consider the robot's architecture and ensure compatibility with the sensor. Additionally, the sensor should be able to communicate with the microcontroller using protocols like Serial Peripheral Interface (SPI) and Inter-Integrated Circuit (I2C).
