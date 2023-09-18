@@ -47,7 +47,9 @@ The power consumption of the Radon Eye RD200 is 1.2 watts.
 Considering that the robot is powered by corded electricity, such a low power consumption greatly helps the efficiency and battery life of the robot. This alone makes the Radon Eye RD200 a great option.
 
 ## Data Communication: 
+
 The sensor will communicate with the Arduino Nano through the UART.
+
 
 ![Capture](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/8c94b023-226e-47b6-a670-f79a3ce60f19)
 
