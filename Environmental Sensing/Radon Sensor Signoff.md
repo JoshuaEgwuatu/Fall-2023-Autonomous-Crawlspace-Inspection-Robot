@@ -73,6 +73,11 @@ The sensor will communicate with the Arduino Nano through the UART.
 
 # BOM
 
+| Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
+| ---           |     ---             |          ---               |      ---        |     ---        |    ---   |  ---      |  ---  |
+| Radon Sensor  |RD200 RadonEye       |  Sensor                    | B01IH7SGCQ      | Radon Eye      |    1     |$174.00    |$174.00|
+|               |                     |                            |                 |Total Components|    1     |Total Cost |$174.00 |
+
 # References
 http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
 https://static1.squarespace.com/static/5b993fe05cfd798a41d5ad02/t/5efcc978603e985475044e16/1593624954643/brochureRadonEye_foldout.pdf
