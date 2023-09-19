@@ -6,12 +6,9 @@ The purpose of the radon sensor in the Autonomous Crawl Space Inspection Robot i
 
 The Radon Eye RD200 was selected by the team due to its compact and lightweight nature, distinguishing it from other radon sensors. It maintains dependable precision and accuracy when detecting radon gas levels. This guarantees the acquisition of reliable data for evaluating potential health hazards.
 
-
-
-
 # Constraints:
 
-One important constraint is Sensor Accuracy and Reliability. The radon sensor is crucial for accurately detecting and measuring radon levels. It must provide precise readings to effectively assess the concentration of radon gas.To ensure the radon sensor is accurate and reliable, there are several requirements. The sensor needs to be able to detect 0.5 counts per minute (cpm) per picocurie per liter (pCi/l) at a radon level of 10 pCi/l (or 30 counts per hour per picocurie per liter). It should operate within a temperature range of 10 to 40 degrees Celsius and with a relative humidity below 90%. The measurement range should be between 0.1 and 99.99 pCi/l. The precision should be within 10% at 10 pCi/l, and the accuracy should be within ±10%, with an error of less than ±0.5 pCi/l. The sensor should provide the first reliable data output in under 60 minutes and update the data every 10 minutes using a 60-minute moving average. The data log should store up to one year's worth of data, with intervals of 1 hour.
+One important constraint is Sensor Accuracy and Reliability. The radon sensor is crucial for accurately detecting and measuring radon levels. It must provide precise readings to assess the concentration of radon gas effectively. To ensure the radon sensor is accurate and reliable, there are several requirements. The sensor needs to be able to detect 0.5 counts per minute (cpm) per picocurie per liter (pCi/l) at a radon level of 10 pCi/l (or 30 counts per hour per picocurie per liter). It should operate within a temperature range of 10 to 40 degrees Celsius and with a relative humidity below 90%. The measurement range should be between 0.1 and 99.99 pCi/l. The precision should be within 10% at 10 pCi/l, and the accuracy should be within ±10%, with an error of less than ±0.5 pCi/l. The sensor should provide the first reliable data output in under 60 minutes and update the data every 10 minutes using a 60-minute moving average. The data log should store up to one year's worth of data, with intervals of 1 hour.
 
 The constraint for power consumption is that the radon sensor, specifically the RD200 model, should not consume more than 5 Volts (V). However, the RD200 model operates at DC 12 ± 0.1V, 65mA, which exceeds the desired power consumption limit. Therefore, if we want to conform to the power constraint, modifications or adaptations will be needed to reduce the RD200's power consumption to no more than 5V.
 
@@ -23,13 +20,6 @@ The Integration Complexity, while connecting the Radon Eye RD200 is relatively s
 | Type                     | First reliable data out | Data interval                       | Sensitivity                           | Operating range   | Range             | Precision        | Accuracy                        | Power                               | Size                     |
 |--------------------------|-------------------------|-------------------------------------|---------------------------------------|-------------------|-------------------|------------------|---------------------------------|-------------------------------------|--------------------------|
 | pulsed ion chamber 200cc | < 60min                 | 10min update (60min moving average) | 0.5cpm/pCi/l at 10pCi/l (30cph/pCi/l) | 10~40°C, RH < 90% | 0.1 ~ 99.99 pCi/l | < 10% at 10pCi/l | < ±10% (min. error <±0.5pCi/l ) | DC 12 ± 0.1V, 65mA (12V DC adapter) | Φ80(mm) x 120(mm) , 240g |
-|                          |                         |                                     |                                       |                   |                   |                  |                                 |                                     |                          |
-
-Specifications and Constraints:
-- Shall have accuracy and reliability.
-- Shall consider power consumption.
-- Shall consider size and weight.
-- Shall consider integration complexity.
 
 # Analysis
 
