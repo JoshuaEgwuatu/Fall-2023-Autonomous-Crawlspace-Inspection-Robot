@@ -15,11 +15,27 @@ The GPS subsystem works with the top-level controller and robotic operating syst
 - The GPS subsystem collaborates with other sensors, sharing its location data to enhance the robot's ability to gather accurate environmental data by combining information from multiple sources.
 
 # Constraints:
-First constraint that we need to considered is the GPS Signal Acquisition. The robot operates in an environment with limited sky visibility, it may struggle to acquire a strong GPS signal, leading to inaccurate or intermittent readings.
 
-Second constraint that we need to considered is accuracy of GPS readings. The accuracy of GPS readings can be quantified using metrics such as horizontal accuracy, vertical accuracy, and time accuracy. 
+The robot operates in a limited visibility of the sky, where obstacles blocking GPS satellite signals, the robot needs to quickly acquire a reliable GPS signal. To achieve this, we set the time limit for signal acquisition, X < 0.06 seconds. Since GPS signals travel at the speed of light, which has a slight delay of about 6/100ths of a second, configuring X allows the robot to efficiently obtain the GPS signal within the desired timeframe.
 
-Third constraint that we need to considered is environmental constraints. Environmental factors, such as signal blockage or degradation, can be modeled using signal propagation models. These models consider factors such as distance, obstacles, and signal attenuation to predict the quality of the GPS signal in a given environment.
+> “GPS radio signals travel at the speed of light, up to 186,000 miles per second, meaning that a GPS satellite signal takes 6/100ths of a second to reach the earth.”
+
+
+The second limitation we need to consider is how accurate the GPS readings are. There are a few specific criteria these readings should meet. 
+-	The horizontal accuracy, which ensures precise positioning, needs to be within 3 meters.
+-	The vertical accuracy, which is important for accurate altitude measurements, needs to be within 5 meters. 
+-	The GPS should provide accurate timing information, with a time accuracy within 30 nanoseconds. 
+-	The speed accuracy, which is determined by the global average user range rate error (URRE), should be 0.006 m/sec or less over any 3-second period with a 95% chance.
+
+The GPS system needs to consider things like signal weakening and interference from the environment. It should use models to predict and reduce the effects of these factors on GPS signal quality. Even when there are obstacles blocking about 100.45% of the signal, like walls in a rectangular crawlspace, the system should try to maintain a good signal. 
+
+The percentage of signal blockage caused by the walls is (99.45 square feet / 99 square feet) x 100 ≈ 100.45%.
+
+Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace is 99 square feet. By using floor tiles as a reference, with each tile measuring 9 in by 9 in, we can determine that the crawlspace occupies an area of 11 by 11 tiles. The walls of the model crawlspace, constructed with various materials, have a minimum height of 17 in and a maximum height of 36 in. Considering an average height of 26.5 in (2.21 ft), we can calculate the area of the walls. Assuming the walls are straight and uniformly tall, the area of the walls is estimated to be 99.45 square feet.
+
+> "rectangular-shaped model crawlspace was created, with a length of 16.5 ft, a width of 6 ft, and a resulting area of 99 square feet. Floor tiles were used as a reference for quantifying the crawlspace area, with each floor tile having an area of 9 in by 9 in. The walls of the model crawlspace were made with various materials available in the laboratory and had a minimum height of 17 in and a maximum height of 36 in." from the Experimental Data
+
+
 
 | No.|  Specifications and Constraints                                                                                             | 
 | ---|---                                                                                                                          |        
@@ -191,6 +207,13 @@ https://www.e-education.psu.edu/geog862/node/1874
 
 https://en.wikipedia.org/wiki/Friis_transmission_equation
 
-
 https://rotorriot.com/products/m10q-5883-gnss-gps-compass-module
+
+https://www.skypatrol.com/blog/understanding-gps 
+
+https://gisgeography.com/gps-accuracy-hdop-pdop-gdop-multipath/
+
+https://gisgeography.com/gps-accuracy-hdop-pdop-gdop-multipath/
+
+https://www.gps.gov/systems/gps/performance/accuracy/
 
