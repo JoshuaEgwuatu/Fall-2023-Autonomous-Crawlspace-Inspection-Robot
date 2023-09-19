@@ -8,11 +8,14 @@ The team chose the BetaFPV C02 2.1mm 1200TVL FPV Micro Camera. By connecting the
 
 # Constraints:
 
-1. Limited bandwidth in the crawlspace area. This can affect the quality and reliability of the live video feed.
+The bandwidth BetaFPV C02 camera = 1200 pixels × 30 fps × 24 bits × 10 = 8,640,000 bps
+8,640,000 bps / 1,000,000 = 8.64 Mbps
+The available bandwidth in the crawlspace area is limited to 8.64 Mbps. This limited bandwidth can impact the quality of the live video feed. To have the optimal performance, the design criteria should focus on operating the video streaming system within this bandwidth constraint. 
 
-2. The latency, which is the delay introduced during real-time video streaming over a network. This delay can impact the responsiveness of the remote control and guidance of the robot.
+The second constraint is latency, or the delay in real-time video streaming. The latency introduced during real-time video streaming should be minimized to ensure responsive remote control and guidance of the robot. The aim is to keep it between 20-40 milliseconds, but up to 100 milliseconds can work.
 
-3. The Raspberry Pi's limited computational power is a constraint. This may affect the camera's ability to handle high-resolution video streams or perform additional image processing tasks. As a result, it could impact the quality and responsiveness of the video feed.
+The Raspberry Pi 4 has limitations like a 1.5 GHz quad-core CPU and different RAM options (2, 4, or 8 GB). These limits may affect the camera's ability to handle high-resolution videos above 1080p at 30 frames per second. Additionally, if the camera must process complex image tasks, it could cause delays beyond the ideal range of 20-40 milliseconds, affecting the video's responsiveness.
+
 
 Specifications and Constraints:
 
@@ -76,3 +79,7 @@ https://www.avaccess.com/blogs/guides/h264-vs-h265-difference/
 https://forums.raspberrypi.com/viewtopic.php?t=268356
 
 https://www.reddit.com/r/raspberry_pi/comments/e64bl6/is_the_4bs_h265_hardware_decode_currently/
+
+https://www.evercast.us/blog/low-latency-video-conferencing
+
+https://en.wikipedia.org/wiki/Raspberry_Pi
