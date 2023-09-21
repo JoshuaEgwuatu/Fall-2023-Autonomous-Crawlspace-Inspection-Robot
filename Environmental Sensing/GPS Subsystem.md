@@ -1,18 +1,15 @@
 # Function of the subsystem:
 
-The robot will use a GPS subsystem to track its location in real-time, which will help improve environmental data collection. By integrating GPS, the robot can continuously determine its precise coordinates, enhancing the accuracy and efficiency of data collection. It can navigate to specific locations based on GPS coordinates, allowing for targeted data collection from different points of interest. This approach enables more precise data gathering.
+The robot utilizes a GPS subsystem to track its location in real-time, enhancing the accuracy and efficiency of data collection. By continuously determining its precise coordinates, the robot can navigate to specific locations based on GPS coordinates, enabling targeted data collection from various points of interest. This approach ensures more precise data gathering. To fulfill the function of real-time location tracking and improve environmental data collection, the team selected the M10Q-5883 GNSS GPS & Compass Module. Alongside the top-level controller and robotic operating system (ROS), the GPS subsystem integrates seamlessly, allowing the controller to make informed decisions and control the robot's actions by utilizing GPS data and other sensor inputs. Additionally, ROS facilitates the connection between the GPS subsystem and other systems such as mapping and path planning, ensuring smooth interoperability.
 
-The team chose the M10Q-5883 GNSS GPS & Compass Module, for the function of real-time location tracking to improve environmental data collection in a robot.
-
-The GPS subsystem works with the top-level controller and robotic operating system (ROS). The controller manages different parts of the robot and can use GPS data along with other sensors to make decisions and control its actions. ROS helps the GPS subsystem connect with other systems like mapping and path planning, making everything work together smoothly.
 
 ## Function:
-- The GPS subsystem helps the robot know exactly where it is at all times. It uses a special module called M10Q-5883 GNSS GPS & Compass to track its location accurately and continuously.
+- GPS subsystem tracks robot location using M10Q-5883 module.
+- Provides real-time location data to the controller for decision-making and control.
+- Integrates with ROS for seamless data exchange with other robot systems.
+- Shares location data with mapping and path planning modules in ROS for targeted navigation.
+- Collaborates with sensors to enhance environmental data accuracy.
 
-- The GPS subsystem communicates with the top-level controller, providing real-time location data that helps the controller make decisions and control the robot's actions.
-- The GPS subsystem integrates with the robotic operating system (ROS), which allows it to seamlessly exchange data with other systems in the robot.
-- The GPS subsystem shares its location data with mapping and path planning modules in ROS, enabling the robot to navigate to specific locations for targeted data collection.
-- The GPS subsystem collaborates with other sensors, sharing its location data to enhance the robot's ability to gather accurate environmental data by combining information from multiple sources.
 
 # Constraints:
 
@@ -37,11 +34,21 @@ Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace 
 
 
 
-| No.|  Specifications and Constraints                                                                                             | 
-| ---|---                                                                                                                          |        
-| 1  |Shall consider the constraint of limited sky visibility in the robot's environment, which may impede GPS signal acquisition  | 
-| 2  |Shall acknowledge that the accuracy of GPS signals depends on the number of satellites in view.                              |
-| 3  |Shall account for environmental constraints, including signal blockage or degradation                                        | 
+## Specifications and Constraints                                                                                        
+1- The robot shall be capable of acquiring a reliable GPS signal within a time limit of less than 0.06 seconds, considering limited sky visibility and potential signal blockage.
+
+2- The acquired GPS readings shall meet the following accuracy criteria:
+   - Horizontal accuracy: within 3 meters.
+   - Vertical accuracy: within 5 meters.
+   - Time accuracy: within 30 nanoseconds.
+   - Speed accuracy: 0.006 m/sec or less over any 3-second period with a 95% chance.
+
+3- The GPS system shall utilize predictive models to mitigate the effects of signal weakening and interference caused by environmental factors, even when approximately 100.45% of the signal is blocked by obstacles such as walls in a rectangular crawlspace.
+
+4- The time limit for GPS signal acquisition, denoted as X, is set to be less than 0.06 seconds to accommodate the slight delay in GPS signals, which take approximately 6/100ths of a second to reach the Earth.
+
+5- The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation.
+
 
 # Analysis 
 In situations where there are obstacles obstructing the line of sight between the GPS module and the satellites, the limited sky visibility can result in weaker GPS signals and a decrease in signal-to-noise ratio (SNR). We are using the Log-normal Shadowing Model, which considers the distance between the GPS module and the obstacles, allowing for the quantification of signal attenuation caused by the obstacles. 
