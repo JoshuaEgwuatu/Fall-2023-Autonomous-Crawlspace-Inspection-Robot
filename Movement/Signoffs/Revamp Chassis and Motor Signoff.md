@@ -1,24 +1,16 @@
 # Function of the subsystem:
 The function of this subsystem is to make mechanical improvements to both the movement and power subsystems for the Crawlspace Inspection Robot to climb a 30-degree incline. The team will improve the power subsystem we need to increase the power output of the robot in order to allow it to navigate through more crawlspace environments by check the current power subsystem of the robot, determining the maximum power output capability of the existing system, and evaluating the power requirements for navigating through various crawlspace environments. Through our new list of specifications and contraints, we can analyse a soltuion to the problem. 
 
-# Constraints:
+# Specifications and Constraints:
 
-1- Physical limitations
-   - The robot's structure and components may have limitations on how much power they can handle or accommodate
-   - The device shall have rubber treading for more friction on inclined surfaces.
-   - Main Chassie must have a low center of gravity for stability on the device.
-   - Crawlspace Robot will be significantly heavier than the original model.
+1. The Robot’s weight distribution and electrical components shall be improved with better DC motors and lower center of gravity. The Robot’s weight distribution and electrical components shall be improved by using more efficient and powerful DC motors, we should lower the robot’s center of gravity, ensuring it remains (put here the value of the maximum height of the robot) from the ground. 
+2. The device shall have rubber treading for more friction on inclined surfaces. The robot shall have rubber treads with a minimum coefficient of friction of 0.8 or higher to ensure increased traction on inclined surfaces (0.8 or higher is often considered a reasonable benchmark for rubber treads on inclined surfaces).
+3. The Crawlspace Robot shall be significantly heavier than the original model.
+4. Power consumption shall suffice using both batteries for overall output by supplying 360W to the device.
+5. Power subsystem shall supply more power than the current model by adding another battery in parallel to provide 14 A to the electrical system without increasing the voltage.
+6. The DC Motors selected shall help the Crawl Space Robot move easier on an incline with the motors that increase its torque with its 90:1 gear ratio and 38 kg⋅cm stall torque.
+7. For the power Subsystem, the motors can run off the main power lines of 12V DC and use the buck converter to power the microcontroller, the Raspberry Pi Model 4, to command the sensors and motor drivers.
 
-
- 2- Energy source limitations
-   - The availability and capacity of the energy source used to power the robot may impose constraints on the power output
-   - Power consumption will suffice for overall output.
-   - Power subsystem will supply more voltage than the current model by adding another battery in series to provide 24V DC to the electrical system.
-
-3-  Compatibility with existing systems
-   - The improved power subsystem should be compatible with the robot's existing systems and components
-   - For the power Subsystem, the motors can run off the main power lines of 12V DC and use the buck converter to power the microcontroller, the Raspberry Pi Model 4, for the motors.
-   - 
 
 # Analysis: 
 
@@ -70,10 +62,9 @@ As you can see in Figure (), the estimated weight of the updated Croombah would 
 # Buildable Schematics
 
 ## 3D models
-Yahboom Aluminum Alloy ROS Robot Car Chassis - Crawler:
+XiaoR Geek Smart Robot Aluminum Alloy Robot Car Chassis:
 
-<img width="208" alt="Screenshot 2023-09-14 162439" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/5eee0979-cc0b-4a24-ac4c-d87978fc3986">
-
+![Current Chassis Model](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/118767661/798db94e-cbcf-48c2-9256-b24a9b1e4bde)
 
 
 GB37Y3530-12V-90EN:
@@ -83,10 +74,17 @@ GB37Y3530-12V-90EN:
 
 ## Electrical Schematics
 
+![Revamp Schematic new](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/118767661/d00299d3-a35d-4eed-b7df-32f29bd9bc50)
+
+
+
 # BOM
-|Name of Items|Description|Used in which subsystem(s)|Part Number|Manufacturer|Quantity| Price|Total|
-|Crawler Chassis|New Chassis Model|Movement|6000101002|YAHBOOM|1|$179.00|$179.00|
-|Metal DC Geared Motor|12V motor with a 90:1 metal gearbox and an integrated quadrature encoder|Movement|GB37Y3530-12V-90EN|DFROBOT|1|$29.00|$208.00|
+
+|Name of Items          |Description                                                             |Used in which subsystem(s)|Part Number       |Manufacturer           |Quantity  |Price  |Total  |
+|-----------------------|------------------------------------------------------------------------|--------------------------|------------------|-----------------------|----------|-------|-------|
+|Metal DC Geared Motor  |12V motor with a 90:1 metal gearbox and an integrated quadrature encoder|Movement                  |GB37Y3530-12V-90EN|DFROBOT                |1         |$29.00 |$29.00 |
+|LiFePO4 12.8VDC Battery|Custom LiFePO4 26650 Battery: 12.8V 6.6Ah (84Wh 14A Rate)               |Power                     |CU-MM167          |AA Portable Power Corp.|1         |$98.95 |$127.95|
+
 
 
 # References
@@ -96,3 +94,6 @@ https://www.pololu.com/product-info-merged/4845
 https://wiki.dfrobot.com/12V_DC_Motor_122_rpm_w_Encoder_SKU__FIT0403
 https://www.linkedin.com/pulse/comparison-pallet-truck-wheel-materials-plastic-wheels-elly-lee#:~:text=Compared%20to%20plastic%20wheels%2C%20nylon,advantageous%20in%20certain%20specialized%20environments.
 https://github.com/YahboomTechnology/ROS-Robot-Chassis
+https://www.batterystuff.com/kb/articles/battery-articles/battery-bank-tutorial.html
+https://www.quora.com/What-does-a-gear-ratio-of-60-1-mean-in-a-gear-motor-used-in-an-industrial-conveyor 
+https://punchlistzero.com/coefficient-of-friction-meaning-calculation-values/ 
