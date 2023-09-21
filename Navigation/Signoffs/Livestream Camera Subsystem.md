@@ -1,9 +1,7 @@
 # Livestream Camera Subsystem
 # Function of the subsystem
 
-The purpose of adding a live stream video camera to the Raspberry Pi in an Autonomous Crawl Space Inspection Robot is to establish seamless communication between the robot and a central control unit. This entails transmitting real-time video feeds. By incorporating a live stream camera, the central control unit can remotely monitor and observe the robot's actions and the surrounding environment within the crawl space instantly. This functionality enables efficient inspection and exploration by providing a live video feed that allows operators to assess the crawlspace's condition, identify potential concerns, and make well-informed decisions based on visual feedback. The live stream camera on the Raspberry Pi enhances communication and coordination between the robot and the central control unit, resulting in an improved inspection system that is more responsive and effective.
-
-The team chose the BetaFPV C02 2.1mm 1200TVL FPV Micro Camera. By connecting the camera to Raspberry Pi, the team can utilize the features of the BetaFPV C02 2.1mm 1200TVL FPV Micro Camera. The Raspberry Pi's dedicated camera connector is compatible with the BetaFPV C02. 
+The live stream camera on the Raspberry Pi enables real-time video transmission for seamless communication between the robot and the central control unit. The BetaFPV C02 2.1mm 1200TVL FPV Micro Camera was selected and connected to the Raspberry Pi for this purpose, enhancing inspection capabilities and facilitating informed decision-making.
 
 
 # Constraints:
@@ -17,13 +15,14 @@ The second constraint is latency, or the delay in real-time video streaming. The
 The Raspberry Pi 4 has limitations like a 1.5 GHz quad-core CPU and different RAM options (2, 4, or 8 GB). These limits may affect the camera's ability to handle high-resolution videos above 1080p at 30 frames per second. Additionally, if the camera must process complex image tasks, it could cause delays beyond the ideal range of 20-40 milliseconds, affecting the video's responsiveness.
 
 
-Specifications and Constraints:
+## Specifications and Constraints:
 
-- Consider limited bandwidth in the crawlspace, which can affect video quality and reliability.
+1- Bandwidth Constraint: Limited bandwidth in the crawlspace (8.64 Mbps) affects video quality and reliability.
 
-- Consider the latency in real-time video streaming, impacting remote control responsiveness.
+2- Latency Constraint: Real-time video streaming should have minimal latency (20-40 milliseconds, up to 100 milliseconds acceptable) for responsive remote control.
 
-- Understand the Raspberry Pi's limited processing capabilities, affecting high-resolution video handling.
+3- Raspberry Pi Limitations: Raspberry Pi's processing limitations (1.5 GHz quad-core CPU, various RAM options) impact high-resolution video handling and video responsiveness.
+
 
 
 
