@@ -1,48 +1,57 @@
 # Livestream Camera Subsystem
 # Function of the subsystem
 
-The live stream camera on the Raspberry Pi enables real-time video transmission for seamless communication between the robot and the central control unit. The BetaFPV C02 2.1mm 1200TVL FPV Micro Camera was selected and connected to the Raspberry Pi for this purpose, enhancing inspection capabilities and facilitating informed decision-making.
+Adding a live stream camera to the Autonomous Crawlspace Inspection Robot allows for real-time visual monitoring of the crawlspace. This helps identify issues, make informed decisions, and ensure a smooth viewing experience with clear video transmission and a stable connection.
 
 
 # Constraints:
 
-The bandwidth BetaFPV C02 camera = 1200 pixels × 30 fps × 24 bits × 10 = 8,640,000 bps
-8,640,000 bps / 1,000,000 = 8.64 Mbps
-The available bandwidth in the crawlspace area is limited to 8.64 Mbps. This limited bandwidth can impact the quality of the live video feed. To have the optimal performance, the design criteria should focus on operating the video streaming system within this bandwidth constraint. 
+| Item:          | C02 Camera              |
+|----------------|-------------------------|
+| Image Sensor:  | 1/4" CMOS Sensor        |
+| Horizontal:    | 1200TVL with Global WDR |
+| Signal System: | NTSC                    |
+| Lens:          | 2.1mm(M8) FOV 160°      |
+| S/N Ratio:     | >50db                   |
+| Power:         | DC 3-5.5V               |
+| Current:       | 110mA@5V / 120mA@3.3V   |
+| Dimension:     | 13*11mm                 |
+| Net weight:    | 1.4g                    |
 
-The second constraint is latency, or the delay in real-time video streaming. The latency introduced during real-time video streaming should be minimized to ensure responsive remote control and guidance of the robot. The aim is to keep it between 20-40 milliseconds, but up to 100 milliseconds can work.
 
-The Raspberry Pi 4 has limitations like a 1.5 GHz quad-core CPU and different RAM options (2, 4, or 8 GB). These limits may affect the camera's ability to handle high-resolution videos above 1080p at 30 frames per second. Additionally, if the camera must process complex image tasks, it could cause delays beyond the ideal range of 20-40 milliseconds, affecting the video's responsiveness.
+The first constraint is the bandwidth required for streaming video. It depends on resolution, frame rate, and compression. The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264). The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
+
+The second constraint is a latency of 100 milliseconds can introduce a lag of 0.05 meters in the displayed video, affecting the ability to respond promptly and navigate the crawlspace. Minimizing latency is crucial to enhance real-time visual monitoring, enabling more efficient and timely decision-making.
+
+> and excellent latency while minimizing the weight from betafpv.com
+<br>
+the webiste mentioned that the camera has a good latency, so we are assuming the latency is 100 ms
 
 
-## Specifications and Constraints:
+> What is a good latency? Any latency at 100 ms or lower is considered decent. from reviews.org
 
-1- Bandwidth Constraint: Limited bandwidth in the crawlspace (8.64 Mbps) affects video quality and reliability.
 
-2- Latency Constraint: Real-time video streaming should have minimal latency (20-40 milliseconds, up to 100 milliseconds acceptable) for responsive remote control.
-
-3- Raspberry Pi Limitations: Raspberry Pi's processing limitations (1.5 GHz quad-core CPU, various RAM options) impact high-resolution video handling and video responsiveness.
-
+The power supply is a limiting factor as it is responsible for powering all elements of the robot, including the camera, motors, Raspberry Pi, sensor, and motor drivers. Solely, the camera needs 0.946W, which would provide around 380 hours of operation from a 360W power supply, assuming no power is drawn by other components. This operational time will decrease with the power draw from other components. Introducing an additional battery could boost the available current, possibly fulfilling the power needs of all the components.
 
 
 
 # Analysis
 
-The bandwidth in the crawl space area may affect the quality and reliability of the video feed. The camera has a resolution of 1200TVL, a 1/4" CMOS sensor, and a 2.1mm lens with a FOV of 160°. The resolution is 1200 pixels. The frame rate is 30 fps. Common bit depth of 24 bits (8 bits per channel) and a compression ratio of 10:1
+The camera has a resolution of 1200TVL, a 1/4" CMOS sensor, and a 2.1mm lens with a FOV of 160°. The resolution is 1200 pixels. The frame rate is 30 fps. (the camera supports standard NTSC frame rates = 30 fps), using H.264 compression (compression ratio of 20:1 for H.264)
+Bandwidth = 1280 × 1024 × 30 × 10 × (1/20) = 78,643,200 bps = 78.64 Mbps. With a bandwidth of 78.64 Mbps, there should be ample capacity to transmit real-time video from the Autonomous Crawlspace Inspection Robot. This bandwidth should enable a crisp video feed and a reliable connection, ensuring a seamless viewing experience.
 
-Bandwidth = Resolution × Frame Rate × Bit Depth × Compression Ratio
-
-The bandwidth for streaming real-time video from the BetaFPV C02 camera = 1200 pixels × 30 fps × 24 bits × 10 = 8,640,000 bits per second (bps)
-
-Convert bits per second to megabits per second (Mbps):
-Total bits per second = 8,640,000 bps
-Total megabits per second (Mbps) = Total bits per second / 1,000,000 = 8,640,000 bps / 1,000,000 = 8.64 Mbps
-
-The C02 camera requires approximately 8.64 Mbps of bandwidth to stream real-time video. Based on the bandwidth of 8.64 Mbps for the video feed, the Raspberry Pi 4 Model B, should be able to handle the processing demands in real-time without compromising the quality. The Raspberry Pi 4 Model B is capable of handling high-resolution video streams and can decode H.265 (HEVC) and H.264 (AVC) video codecs. It supports up to 4K video playback. The quad-core ARM Cortex-A72 CPU and VideoCore VI GPU of the Raspberry Pi 4 Model B indicate sufficient processing capabilities.
-
-By comparing the original data size with the compressed data size, the compression ratio is 10:1, which means that the compressed data size is 1/10th of the original data size. The video data can be significantly reduced in size without compromising the quality too much. This allows for more efficient transmission and reduces the bandwidth consumption. “Higher compression ratios may result in a loss of video quality, such as reduced sharpness or increased artifacts.”
+The C02 camera requires approximately 78.64 Mbps of bandwidth to stream real-time video. Raspberry Pi 4 Model B comes with a Gigabit Ethernet, providing a network bandwidth of up to 1000 Mbps. the Raspberry Pi 4 Model B, should be able to handle the processing demands in real-time without compromising the quality. The Raspberry Pi 4 Model B is capable of handling high-resolution video streams and can decode H.265 (HEVC) and H.264 (AVC) video codecs. It supports up to 4K video playback. The quad-core ARM Cortex-A72 CPU and VideoCore VI GPU of the Raspberry Pi 4 Model B indicate sufficient processing capabilities.
 
 The BetaFPV camera is a small and lightweight camera. It has a higher resolution than the minimum requirement for good video quality. It uses the NTSC system, which supports smooth video at around 30 frames per second. The camera is power-efficient, drawing low current at both 3.3V and 5V. It also offers a wide field of view of 160°. Overall, it is an affordable option that meets video quality requirements while being lightweight and power-efficient. 
+
+The camera operates at a DC input of 3-5.5 volts. The power consumption of the camera:
+- at 5V, the current is 110mA or 0.110A. the power consumption is 0.55W. 
+- at 3.3V, the current is 120mA or 0.120A, the power consumption is  0.396W
+<br>
+The total power requirement for the camera: 0.55W + 0.396W = 0.946W
+<br>
+The operational time of the camera: 360W / 0.946W = 380 hours
+
 
 # Buildable Schematics
 ## 3D Model
@@ -82,3 +91,7 @@ https://www.reddit.com/r/raspberry_pi/comments/e64bl6/is_the_4bs_h265_hardware_d
 https://www.evercast.us/blog/low-latency-video-conferencing
 
 https://en.wikipedia.org/wiki/Raspberry_Pi
+
+https://betafpv.com/products/c01-fpv-micro-camera
+
+https://www.reviews.org/internet-service/what-is-internet-latency/
