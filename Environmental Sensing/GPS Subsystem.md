@@ -1,14 +1,12 @@
 # Function of the subsystem:
 
-The robot utilizes a GPS subsystem to track its location in real-time, enhancing the accuracy and efficiency of data collection. By continuously determining its precise coordinates, the robot can navigate to specific locations based on GPS coordinates, enabling targeted data collection from various points of interest. This approach ensures more precise data gathering. To fulfill the function of real-time location tracking and improve environmental data collection, the team selected the M10Q-5883 GNSS GPS & Compass Module. Alongside the top-level controller and robotic operating system (ROS), the GPS subsystem integrates seamlessly, allowing the controller to make informed decisions and control the robot's actions by utilizing GPS data and other sensor inputs. Additionally, ROS facilitates the connection between the GPS subsystem and other systems such as mapping and path planning, ensuring smooth interoperability.
+By incorporating a GPS and compass device into the Autonomous Crawlspace Inspection Robot, it would have the capability to accurately determine its position within the crawlspace. This integration of GPS would enable the robot to generate a map of the crawlspace, displaying its current location and the areas it has explored. By combining GPS and compass data, the robot can plan efficient inspection routes and avoid revisiting previously inspected areas. This optimization ensures a comprehensive inspection while minimizing unnecessary movements. Additionally, by correlating the GPS and compass data with sensor readings or captured images, the collected data can be precisely tagged with location information. 
 
-
-## Function:
-- GPS subsystem tracks robot location using M10Q-5883 module.
-- Provides real-time location data to the controller for decision-making and control.
-- Integrates with ROS for seamless data exchange with other robot systems.
-- Shares location data with mapping and path planning modules in ROS for targeted navigation.
-- Collaborates with sensors to enhance environmental data accuracy.
+## Function summary points:
+- GPS and compass integration enables accurate positioning within the crawlspace.
+- The robot can generate a map of the crawlspace, showing its location and explored areas.
+- GPS and compass data help plan efficient inspection routes and avoid revisiting areas.
+- Correlating GPS and compass data with sensor readings or images allows precise tagging of collected data with location information
 
 
 # Constraints:
@@ -24,17 +22,16 @@ The second limitation we need to consider is how accurate the GPS readings are. 
 -	The GPS should provide accurate timing information, with a time accuracy within 30 nanoseconds. 
 -	The speed accuracy, which is determined by the global average user range rate error (URRE), should be 0.006 m/sec or less over any 3-second period with a 95% chance.
 
-The GPS system needs to consider things like signal weakening and interference from the environment. It should use models to predict and reduce the effects of these factors on GPS signal quality. Even when there are obstacles blocking about 100.45% of the signal, like walls in a rectangular crawlspace, the system should try to maintain a good signal. 
+The GPS system needs to consider things like signal weakening and interference from the environment. It should use models to predict and reduce the effects of these factors on GPS signal quality. Even when there are obstacles blocking about 100.45% of the signal, like walls in a rectangular crawlspace, the system should try to maintain a good signal. We must enhance GPS accuracy and overcome signal weakening and interference using incorporating compass and mapping techniques
 
 The percentage of signal blockage caused by the walls is (99.45 square feet / 99 square feet) x 100 ≈ 100.45%.
-
 Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace is 99 square feet. By using floor tiles as a reference, with each tile measuring 9 in by 9 in, we can determine that the crawlspace occupies an area of 11 by 11 tiles. The walls of the model crawlspace, constructed with various materials, have a minimum height of 17 in and a maximum height of 36 in. Considering an average height of 26.5 in (2.21 ft), we can calculate the area of the walls. Assuming the walls are straight and uniformly tall, the area of the walls is estimated to be 99.45 square feet.
 
 > "rectangular-shaped model crawlspace was created, with a length of 16.5 ft, a width of 6 ft, and a resulting area of 99 square feet. Floor tiles were used as a reference for quantifying the crawlspace area, with each floor tile having an area of 9 in by 9 in. The walls of the model crawlspace were made with various materials available in the laboratory and had a minimum height of 17 in and a maximum height of 36 in." from the Experimental Data
 
 
 
-## Specifications and Constraints                                                                                        
+## Constraints Summary                                                                                        
 1- The robot shall be capable of acquiring a reliable GPS signal within a time limit of less than 0.06 seconds, considering limited sky visibility and potential signal blockage.
 
 2- The acquired GPS readings shall meet the following accuracy criteria:
@@ -47,7 +44,7 @@ Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace 
 
 4- The time limit for GPS signal acquisition, denoted as X, is set to be less than 0.06 seconds to accommodate the slight delay in GPS signals, which take approximately 6/100ths of a second to reach the Earth.
 
-5- The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation.
+5- The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation. Incorporating compass and mapping techniques can be utilized to enhance GPS accuracy and overcome signal weakening and interference challenges.  
 
 
 # Analysis 
@@ -173,6 +170,28 @@ We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concur
 
 ![Image 9-10-23 at 3 33 PM](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/4090fdb3-1ddd-4458-8dd8-948a7d28b8fe)
 
+<br>
+
+GPS accuracy can be improved and signal challenges can be overcome by utilizing compass and mapping techniques. The compass provides the robot's heading information as θ in degrees, enabling it to maintain a sense of direction. Dead reckoning, a mapping technique, estimates the robot's position by considering its previous known position, changes in heading, and distance traveled.
+<br>
+
+x0 = 16.5 ft / 2 = 8.25 ft 
+<br>
+y0 = 6 ft / 2 = 3 ft
+<br>
+d = 16.5 ft
+<br>
+
+As the robot moves through the crawlspace, it can continuously update its position. However, due to uncertainties in measuring distances and changes in direction, errors can accumulate over time.
+<br>
+
+x = 8.25 ft + 16.5 ft * cos(180 degrees)
+   = 8.25 ft - 16.5 ft
+   = -8.25 ft
+<br>
+y = 3 ft + 16.5 ft * sin(180 degrees)
+   = 3 ft + 16.5 ft * 0
+   = 3 ft
 
 
 # Buildable Schematics
@@ -223,4 +242,6 @@ https://gisgeography.com/gps-accuracy-hdop-pdop-gdop-multipath/
 https://gisgeography.com/gps-accuracy-hdop-pdop-gdop-multipath/
 
 https://www.gps.gov/systems/gps/performance/accuracy/
+
+https://www.sciencedirect.com/topics/earth-and-planetary-sciences/dead-reckoning
 
