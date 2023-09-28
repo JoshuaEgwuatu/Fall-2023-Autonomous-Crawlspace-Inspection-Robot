@@ -1,50 +1,35 @@
 # Function of the subsystem:
 
-By incorporating a GPS and compass device into the Autonomous Crawlspace Inspection Robot, it would have the capability to accurately determine its position within the crawlspace. This integration of GPS would enable the robot to generate a map of the crawlspace, displaying its current location and the areas it has explored. By combining GPS and compass data, the robot can plan efficient inspection routes and avoid revisiting previously inspected areas. This optimization ensures a comprehensive inspection while minimizing unnecessary movements. Additionally, by correlating the GPS and compass data with sensor readings or captured images, the collected data can be precisely tagged with location information. 
-
-## Function summary points:
-- GPS and compass integration enables accurate positioning within the crawlspace.
-- The robot can generate a map of the crawlspace, showing its location and explored areas.
-- GPS and compass data help plan efficient inspection routes and avoid revisiting areas.
-- Correlating GPS and compass data with sensor readings or images allows precise tagging of collected data with location information
+The GPS system is expected to provide real-time location tracking of the autonomous crawlspace inspection robot to enhance the accuracy of environmental data collection.
 
 
 # Constraints:
 
-The robot operates in a limited visibility of the sky, where obstacles blocking GPS satellite signals, the robot needs to quickly acquire a reliable GPS signal. To achieve this, we set the time limit for signal acquisition, X < 0.06 seconds. Since GPS signals travel at the speed of light, which has a slight delay of about 6/100ths of a second, configuring X allows the robot to efficiently obtain the GPS signal within the desired timeframe.
+## Constraint 1: 
+The robot shall be capable of acquiring a reliable GPS signal within a time limit of less than 0.06 seconds, considering limited sky visibility and potential signal blockage.
 
+### More detail about constraint 1:
+GPS signals travel at the speed of light, which has a slight delay of about 6/100ths of a second, configuring X allows the robot to efficiently obtain the GPS signal within the desired timeframe.
 > “GPS radio signals travel at the speed of light, up to 186,000 miles per second, meaning that a GPS satellite signal takes 6/100ths of a second to reach the earth.”
 
 
-The second limitation we need to consider is how accurate the GPS readings are. There are a few specific criteria these readings should meet. 
--	The horizontal accuracy, which ensures precise positioning, needs to be within 3 meters.
--	The vertical accuracy, which is important for accurate altitude measurements, needs to be within 5 meters. 
--	The GPS should provide accurate timing information, with a time accuracy within 30 nanoseconds. 
--	The speed accuracy, which is determined by the global average user range rate error (URRE), should be 0.006 m/sec or less over any 3-second period with a 95% chance.
+## Constraint 2: 
+The acquired GPS readings shall meet the following accuracy criteria:
+   - Horizontal accuracy: within 3 meters.
+   - Vertical accuracy: within 5 meters.
+   - Time accuracy: within 30 nanoseconds.
+   - Speed accuracy: 0.006 m/sec or less 
 
-The GPS system needs to consider things like signal weakening and interference from the environment. It should use models to predict and reduce the effects of these factors on GPS signal quality. Even when there are obstacles blocking about 100.45% of the signal, like walls in a rectangular crawlspace, the system should try to maintain a good signal. We must enhance GPS accuracy and overcome signal weakening and interference using incorporating compass and mapping techniques
 
+## Constraint 3: 
+The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation. Incorporating compass and mapping techniques can be utilized to enhance GPS accuracy and overcome signal weakening and interference challenges.  
+
+### More detail about constraint 3:
 The percentage of signal blockage caused by the walls is (99.45 square feet / 99 square feet) x 100 ≈ 100.45%.
 Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace is 99 square feet. By using floor tiles as a reference, with each tile measuring 9 in by 9 in, we can determine that the crawlspace occupies an area of 11 by 11 tiles. The walls of the model crawlspace, constructed with various materials, have a minimum height of 17 in and a maximum height of 36 in. Considering an average height of 26.5 in (2.21 ft), we can calculate the area of the walls. Assuming the walls are straight and uniformly tall, the area of the walls is estimated to be 99.45 square feet.
 
 > "rectangular-shaped model crawlspace was created, with a length of 16.5 ft, a width of 6 ft, and a resulting area of 99 square feet. Floor tiles were used as a reference for quantifying the crawlspace area, with each floor tile having an area of 9 in by 9 in. The walls of the model crawlspace were made with various materials available in the laboratory and had a minimum height of 17 in and a maximum height of 36 in." from the Experimental Data
 
-
-
-## Constraints Summary                                                                                        
-1- The robot shall be capable of acquiring a reliable GPS signal within a time limit of less than 0.06 seconds, considering limited sky visibility and potential signal blockage.
-
-2- The acquired GPS readings shall meet the following accuracy criteria:
-   - Horizontal accuracy: within 3 meters.
-   - Vertical accuracy: within 5 meters.
-   - Time accuracy: within 30 nanoseconds.
-   - Speed accuracy: 0.006 m/sec or less over any 3-second period with a 95% chance.
-
-3- The GPS system shall utilize predictive models to mitigate the effects of signal weakening and interference caused by environmental factors, even when approximately 100.45% of the signal is blocked by obstacles such as walls in a rectangular crawlspace.
-
-4- The time limit for GPS signal acquisition, denoted as X, is set to be less than 0.06 seconds to accommodate the slight delay in GPS signals, which take approximately 6/100ths of a second to reach the Earth.
-
-5- The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation. Incorporating compass and mapping techniques can be utilized to enhance GPS accuracy and overcome signal weakening and interference challenges.  
 
 
 # Analysis 
