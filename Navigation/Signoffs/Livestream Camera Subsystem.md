@@ -1,10 +1,37 @@
 # Livestream Camera Subsystem
 # Function of the subsystem
 
-Adding a live stream camera to the Autonomous Crawlspace Inspection Robot allows for real-time visual monitoring of the crawlspace. This helps identify issues, make informed decisions, and ensure a smooth viewing experience with clear video transmission and a stable connection.
+The Camera Subsystem of the Autonomous Crawlspace Inspection Robot is to capture real-time video footage of the crawlspace and transmit it to a central control unit for immediate viewing and assessment.
 
 
 # Constraints:
+
+## Constraint 1:
+The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
+
+### information about Constraint 1:
+The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264). The required bandwidth is calculated to be 78.64 Mbps. 
+
+
+## Constraint 2:
+The second constraint is a latency of 100 milliseconds can introduce a lag of 0.05 meters in the displayed video, affecting the ability to respond promptly and navigate the crawlspace. Minimizing latency is crucial to enhance real-time visual monitoring, enabling more efficient and timely decision-making.
+
+### information about Constraint 2:
+> and excellent latency while minimizing the weight from betafpv.com
+<br>
+the webiste mentioned that the camera has a good latency, so we are assuming the latency is 100 ms
+
+
+> What is a good latency? Any latency at 100 ms or lower is considered decent. from reviews.org
+
+## Constraint 3:
+The power supply is a limiting factor as it is responsible for powering all elements of the robot, including the camera, motors, Raspberry Pi, sensor, and motor drivers. Solely, the camera needs 0.946W, which would provide around 380 hours of operation from a 360W power supply, assuming no power is drawn by other components. This operational time will decrease with the power draw from other components. Introducing an additional battery could boost the available current, possibly fulfilling the power needs of all the components.
+
+
+
+# Analysis
+
+(This table is designed to display crucial information about the camera, along with the methodology used to calculate the information provided below)
 
 | Item:          | C02 Camera              |
 |----------------|-------------------------|
@@ -18,24 +45,6 @@ Adding a live stream camera to the Autonomous Crawlspace Inspection Robot allows
 | Dimension:     | 13*11mm                 |
 | Net weight:    | 1.4g                    |
 
-
-The first constraint is the bandwidth required for streaming video. It depends on resolution, frame rate, and compression. The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264). The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
-
-The second constraint is a latency of 100 milliseconds can introduce a lag of 0.05 meters in the displayed video, affecting the ability to respond promptly and navigate the crawlspace. Minimizing latency is crucial to enhance real-time visual monitoring, enabling more efficient and timely decision-making.
-
-> and excellent latency while minimizing the weight from betafpv.com
-<br>
-the webiste mentioned that the camera has a good latency, so we are assuming the latency is 100 ms
-
-
-> What is a good latency? Any latency at 100 ms or lower is considered decent. from reviews.org
-
-
-The power supply is a limiting factor as it is responsible for powering all elements of the robot, including the camera, motors, Raspberry Pi, sensor, and motor drivers. Solely, the camera needs 0.946W, which would provide around 380 hours of operation from a 360W power supply, assuming no power is drawn by other components. This operational time will decrease with the power draw from other components. Introducing an additional battery could boost the available current, possibly fulfilling the power needs of all the components.
-
-
-
-# Analysis
 
 The camera has a resolution of 1200TVL, a 1/4" CMOS sensor, and a 2.1mm lens with a FOV of 160°. The resolution is 1200 pixels. The frame rate is 30 fps. (the camera supports standard NTSC frame rates = 30 fps), using H.264 compression (compression ratio of 20:1 for H.264)
 Bandwidth = 1280 × 1024 × 30 × 10 × (1/20) = 78,643,200 bps = 78.64 Mbps. With a bandwidth of 78.64 Mbps, there should be ample capacity to transmit real-time video from the Autonomous Crawlspace Inspection Robot. This bandwidth should enable a crisp video feed and a reliable connection, ensuring a seamless viewing experience.
