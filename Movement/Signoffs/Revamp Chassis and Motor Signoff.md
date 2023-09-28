@@ -1,5 +1,6 @@
 # Function of the subsystem:
-The function of this subsystem is to make mechanical improvements to both the movement and power subsystems for the Crawlspace Inspection Robot to climb a 30-degree incline. The team will improve the power subsystem we need to increase the power output of the robot in order to allow it to navigate through more crawlspace environments by check the current power subsystem of the robot, determining the maximum power output capability of the existing system, and evaluating the power requirements for navigating through various crawlspace environments. Through our new list of specifications and contraints, we can analyse a soltuion to the problem. 
+
+This subsystem is designed to enhance the mechanical features of the movement and power subsystems of the Crawlspace Inspection Robot, enabling it to ascend a 30-degree incline and navigate through a wider range of crawlspace environments by boosting its power output.
 
 # Specifications and Constraints:
 
