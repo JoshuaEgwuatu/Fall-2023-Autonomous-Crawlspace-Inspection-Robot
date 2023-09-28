@@ -46,7 +46,7 @@ The sensor accuracy meets the accuracy requirement of 0.5pCi/L or less. The sens
 
 ## Constraint 4:
 
-The sensor is powered by corded electricity with a voltage input of 12 volts and an amperage of 0.1 amps. The group has decided to use another battery pack to power this sensor separately from the rest of the sensors to not take away from the overall battery life of the robot.
+The sensor is powered by corded electricity with a voltage input of 12 volts and an amperage of 0.1 amps.
 
 ## Constraint 5:
 
