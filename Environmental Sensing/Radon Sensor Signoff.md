@@ -2,9 +2,7 @@
 
 # Function of the subsystem
 
-Radon is a hazardous radioactive gas that is commonly found in crawl spaces, resulting from the decay of uranium in natural stone. By integrating a radon sensor into the robot, it can gather real-time information on the radon levels present in the crawlspace. The sensor provides readings that indicate the concentration of radon gas, enabling early detection of elevated levels. 
-
-The Radon Eye RD200 was selected by the team due to its compact and lightweight nature, distinguishing it from other radon sensors. It maintains dependable precision and accuracy when detecting radon gas levels. 
+The role of the radon sensor subsystem is to send data to the main MCU by interfacing with a custom-designed PCB. 
 
 # Constraints:                                                                                                                                  
 
@@ -20,6 +18,9 @@ The Radon Eye RD200 was selected by the team due to its compact and lightweight 
 
 
 # Analysis
+
+The Radon Eye RD200 was selected by the team due to its compact and lightweight nature, distinguishing it from other radon sensors. It maintains dependable precision and accuracy when detecting radon gas levels. 
+
 
 | Type                     | First reliable data out | Data interval                       | Sensitivity                           | Operating range   | Range             | Precision        | Accuracy                        | Power                               | Size                     |
 |--------------------------|-------------------------|-------------------------------------|---------------------------------------|-------------------|-------------------|------------------|---------------------------------|-------------------------------------|--------------------------|
