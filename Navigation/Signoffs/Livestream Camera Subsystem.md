@@ -7,14 +7,17 @@ The Camera Subsystem of the Autonomous Crawlspace Inspection Robot is to capture
 # Constraints:
 
 ## Constraint 1:
-The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
+The camera must be connected to a network with a stable and unrestricted bandwidth of at least 78.64 Mbps to ensure seamless video streaming without buffering or reduced video quality.
 
 ### information about Constraint 1:
-The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264). The required bandwidth is calculated to be 78.64 Mbps. 
+Bandwidth Calculation: 
+Bandwidth = 1280 × 1024 × 30 × 10 × (1/20) = 78,643,200 bps = 78.64 Mbps. 
+The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264).
+The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
 
 
 ## Constraint 2:
-The second constraint is a latency of 100 milliseconds can introduce a lag of 0.05 meters in the displayed video, affecting the ability to respond promptly and navigate the crawlspace. Minimizing latency is crucial to enhance real-time visual monitoring, enabling more efficient and timely decision-making.
+The Camera must achieve a latency below 100 milliseconds to minimize a lag of 0.05 meters in the displayed video, ensuring prompt response and efficient navigation in the crawlspace.
 
 ### information about Constraint 2:
 > and excellent latency while minimizing the weight from betafpv.com
@@ -25,8 +28,23 @@ the webiste mentioned that the camera has a good latency, so we are assuming the
 > What is a good latency? Any latency at 100 ms or lower is considered decent. from reviews.org
 
 ## Constraint 3:
-The power supply is a limiting factor as it is responsible for powering all elements of the robot, including the camera, motors, Raspberry Pi, sensor, and motor drivers. Solely, the camera needs 0.946W, which would provide around 380 hours of operation from a 360W power supply, assuming no power is drawn by other components. This operational time will decrease with the power draw from other components. Introducing an additional battery could boost the available current, possibly fulfilling the power needs of all the components.
+The camera must be powered by 5 or 12 V.
+- Majority of the components operating voltage is 5 volts
 
+
+# Buildable Schematics
+## 3D Model
+
+![51vFJ99uRbL _AC_SL1500_](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/03166f07-04a7-4f2e-8387-a29d586f11c4)
+
+
+## Electrical Schematics
+
+### Full Schematic
+![FULL-SCHE](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/d04110bb-f6b1-4b17-aaa1-8c3aa1aadfc3)
+
+### Camera Schematic
+![CAMERA](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/989e90fe-af41-4094-8d42-d036b6f31866)
 
 
 # Analysis
@@ -61,16 +79,6 @@ The total power requirement for the camera: 0.55W + 0.396W = 0.946W
 <br>
 The operational time of the camera: 360W / 0.946W = 380 hours
 
-
-# Buildable Schematics
-## 3D Model
-
-![51vFJ99uRbL _AC_SL1500_](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/03166f07-04a7-4f2e-8387-a29d586f11c4)
-
-
-## Electrical Schematic
-
-![CAMERA](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/d2765664-6fcb-4128-ad6b-75120bb324fe)
 
 # BOM
 
