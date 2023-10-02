@@ -2,7 +2,7 @@
 
 # Function of the subsystem
 
-The role of the radon sensor subsystem is to send data to the main MCU by interfacing with a custom-designed PCB. 
+The role of the radon sensor subsystem is to send data to the main MCU by interfacing with another MCU. 
 
 # Constraints:                                                                                                                                  
 
@@ -13,8 +13,23 @@ The role of the radon sensor subsystem is to send data to the main MCU by interf
     - This will allow the sensor to use the same MCU as other sensors
 3. The sensor must have accuracy within .5pCi/L for good readings
 4. The sensor should be powered by either 5 or 12V.
-5. The sensor should have both short-term and long-term functionality.
+5. The sensor must produce Real-Time Measurements.
+    - Preferably in intervals of <= 1 minute.
+    - Radon levels are highest at dawn, so averages of an entire day are not as important as tracking any portion of the day.
 
+
+# Buildable Schematics
+## 3D Model
+
+![Capture2](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/68f077dd-3136-4677-801a-17bd6fbe16cf)
+
+
+## Electrical Schematic
+### Sensor interface with Arduino
+![picture of schematic](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6e7a44ed-f4f4-434a-824a-002767f83d8c)
+
+### Overall System Schematic
+![picture of full schematic](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/b9e9d557-10d1-49e6-9da5-fa5014a4c61c)
 
 
 # Analysis
@@ -51,25 +66,16 @@ The sensor is powered by corded electricity with a voltage input of 12 volts and
 
 ## Constraint 5:
 
-The sensor is able to display data in intervals of 10 minutes. The sensor is able to display data per day and month. The device is able to store data for up to a year
-
-
-# Buildable Schematics
-## 3D Model
-
-![Capture2](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/68f077dd-3136-4677-801a-17bd6fbe16cf)
-
-
-## Electrical Schematic
-![Capture1](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/f7fd8153-4001-42ce-9f7b-eb55b6eb4e4a)
-
+The sensor is able to display data in intervals of 1, 10, and 60 minutes. The sensor is able to display data per day and month. The device is able to store data for up to a year
 
 # BOM
 
 | Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
 | ---           |     ---             |          ---               |      ---        |     ---        |    ---   |  ---      |  ---  |
 | Radon Sensor  |RD200 RadonEye       |  Sensor                    | B01IH7SGCQ      | Radon Eye      |    1     |$174.00    |$174.00|
-|               |                     |                            |                 |Total Components|    1     |Total Cost |$174.00 |
+| Arduino Nano  |ATmega328            |  GPS subsystem             | A000005         | Arduino        |    1     |$24.90
+|               |                     |                            |                 |Total Components|    2     |Total Cost |$198.90 |
+
 
 # References
 http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
