@@ -18,11 +18,13 @@ The acquired GPS readings shall meet the following accuracy criteria:
    - Horizontal accuracy: within 3 meters.
    - Vertical accuracy: within 5 meters.
    - Time accuracy: within 30 nanoseconds.
-   - Speed accuracy: 0.006 m/sec or less 
-
+   - Speed accuracy: 0.006 m/sec or less
+   
 
 ## Constraint 3: 
-The walls in the crawlspace obstruct approximately 100.45% of the GPS signal, resulting in signal blockage and degradation. Incorporating compass and mapping techniques can be utilized to enhance GPS accuracy and overcome signal weakening and interference challenges.  
+The required GPS must include a compass: 
+- Obstruction caused by the walls in the crawlspace which leads to approximately 100.45% signal blockage and degradation.
+- Integrating a compass is crucial as it supplements GPS data, compensating for signal loss caused by obstructing walls.
 
 ### More detail about constraint 3:
 The percentage of signal blockage caused by the walls is (99.45 square feet / 99 square feet) x 100 ≈ 100.45%.
@@ -31,6 +33,16 @@ Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace 
 > "rectangular-shaped model crawlspace was created, with a length of 16.5 ft, a width of 6 ft, and a resulting area of 99 square feet. Floor tiles were used as a reference for quantifying the crawlspace area, with each floor tile having an area of 9 in by 9 in. The walls of the model crawlspace were made with various materials available in the laboratory and had a minimum height of 17 in and a maximum height of 36 in." from the Experimental Data
 
 
+# Buildable Schematics
+## 3D Model
+![GPS Dimensions copy](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/6e8e4859-ac41-4840-bfed-8bfedc6d6107)
+
+## Electrical Schematic
+### Full Schematic
+![FULL-SCHE](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/5163496d-c076-425c-9f4d-5a6b2aaeba27)
+
+### GPS Schematic
+![GPS](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/fe74239e-dd3b-4562-94a8-5df121465e68)
 
 # Analysis 
 In situations where there are obstacles obstructing the line of sight between the GPS module and the satellites, the limited sky visibility can result in weaker GPS signals and a decrease in signal-to-noise ratio (SNR). We are using the Log-normal Shadowing Model, which considers the distance between the GPS module and the obstacles, allowing for the quantification of signal attenuation caused by the obstacles. 
@@ -177,15 +189,7 @@ x = 8.25 ft + 16.5 ft * cos(180 degrees)
 y = 3 ft + 16.5 ft * sin(180 degrees)
    = 3 ft + 16.5 ft * 0
    = 3 ft
-
-
-# Buildable Schematics
-## 3D Model
-![GPS Dimensions copy](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/6e8e4859-ac41-4840-bfed-8bfedc6d6107)
-
-## Electrical Schematic
-![gps-sch](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/d29ad344-5e5c-4b88-953b-4b3c92c0469d)
-
+   
 
 # BOM
 | Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
