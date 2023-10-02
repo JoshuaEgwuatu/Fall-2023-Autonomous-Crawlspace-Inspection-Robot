@@ -38,6 +38,7 @@ The radon sensor is able to measure between 0.1 to 99.9 pCi/L. These values work
 The sensor has a UART interface that will be used to communicate with the Arduino Nano. This will allow for data to be easier to track. The electrical schematic will show how these connections will take place.
 
 ![Capture](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/8c94b023-226e-47b6-a670-f79a3ce60f19)
+
 An example of how we will communicate with the sensor
 
 ## Constraint 3:
