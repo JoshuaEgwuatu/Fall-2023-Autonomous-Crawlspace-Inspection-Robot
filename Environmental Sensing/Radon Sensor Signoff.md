@@ -78,8 +78,7 @@ The sensor is able to display data in intervals of 1, 10, and 60 minutes. The se
 
 
 # References
-http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
-https://static1.squarespace.com/static/5b993fe05cfd798a41d5ad02/t/5efcc978603e985475044e16/1593624954643/brochureRadonEye_foldout.pdf
-https://www.epa.gov/radon/what-epas-action-level-radon-and-what-does-it-mean#:~:text=EPA%20recommends%20homes%20be%20fixed,L%20and%204%20pCi%2FL.
-https://merona.blob.core.windows.net/radonftlab-web/20220404_RadonEye_%EC%82%AC%EC%9A%A9%EC%9E%90%EC%84%A4%EB%AA%85%EC%84%9C(%EC%98%81%EB%AC%B8).pdf
-\
+1. http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
+2. https://static1.squarespace.com/static/5b993fe05cfd798a41d5ad02/t/5efcc978603e985475044e16/1593624954643/brochureRadonEye_foldout.pdf
+3. https://www.epa.gov/radon/what-epas-action-level-radon-and-what-does-it-mean#:~:text=EPA%20recommends%20homes%20be%20fixed,L%20and%204%20pCi%2FL.
+4. https://merona.blob.core.windows.net/radonftlab-web/20220404_RadonEye_%EC%82%AC%EC%9A%A9%EC%9E%90%EC%84%A4%EB%AA%85%EC%84%9C(%EC%98%81%EB%AC%B8).pdf
