@@ -29,7 +29,7 @@ The required bandwidth is calculated to be 13.82 Mbps. Sufficient bandwidth is e
 
 
 ### Camera Schematic
-![CAMERA](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/19755576-0135-4692-8ceb-e5ab1326b489)
+![CAM](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/3e9bc4d2-19d7-46b9-a7f0-281cffc44397)
 
 
 
