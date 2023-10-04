@@ -52,9 +52,13 @@ The radon sensor is able to measure between 0.1 to 99.9 pCi/L. These values work
 
 The sensor has a UART interface that will be used to communicate with the Arduino Nano. This will allow for data to be easier to track. The electrical schematic will show how these connections will take place.
 
+An example of how we will communicate with the sensor:
+
 ![Capture](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/8c94b023-226e-47b6-a670-f79a3ce60f19)
 
-An example of how we will communicate with the sensor
+The RD200M is compatible with an Arduino Nano. These serial pins will be used to communicate the RD200M and Arduino Nano [7]:  
+![Capture3](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/edee1df5-697b-4803-802d-eacd862d5010)
+
 
 ## Constraint 3:
 
@@ -78,7 +82,16 @@ The sensor is able to display data in intervals of 1, 10, and 60 minutes. The se
 
 
 # References
-1. http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
-2. https://static1.squarespace.com/static/5b993fe05cfd798a41d5ad02/t/5efcc978603e985475044e16/1593624954643/brochureRadonEye_foldout.pdf
-3. https://www.epa.gov/radon/what-epas-action-level-radon-and-what-does-it-mean#:~:text=EPA%20recommends%20homes%20be%20fixed,L%20and%204%20pCi%2FL.
-4. https://merona.blob.core.windows.net/radonftlab-web/20220404_RadonEye_%EC%82%AC%EC%9A%A9%EC%9E%90%EC%84%A4%EB%AA%85%EC%84%9C(%EC%98%81%EB%AC%B8).pdf
+[1] http://radonftlab.com/wp-content/uploads/2015/data_sheet/datasheet_RD200_v1.4_eng.pdf
+
+[2] https://static1.squarespace.com/static/5b993fe05cfd798a41d5ad02/t/5efcc978603e985475044e16/1593624954643/brochureRadonEye_foldout.pdf
+
+[3] https://www.epa.gov/radon/what-epas-action-level-radon-and-what-does-it-mean#:~:text=EPA%20recommends%20homes%20be%20fixed,L%20and%204%20pCi%2FL.
+
+[4] https://merona.blob.core.windows.net/radonftlab-web/20220404_RadonEye_%EC%82%AC%EC%9A%A9%EC%9E%90%EC%84%A4%EB%AA%85%EC%84%9C(%EC%98%81%EB%AC%B8).pdf
+
+[5] https://www.dcity.org/portfolio/rd200m-library/#:~:text=The%20rd200m%20library%20works%20with,module%20using%20a%20serial%20interface.
+
+[6] https://github.com/dcityorg/rd200m-library-arduino
+
+[7] https://www.arduino.cc/reference/en/language/functions/communication/serial/
