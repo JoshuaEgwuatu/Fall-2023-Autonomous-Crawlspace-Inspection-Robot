@@ -7,29 +7,13 @@ The Camera Subsystem of the Autonomous Crawlspace Inspection Robot is to capture
 # Constraints:
 
 ## Constraint 1:
-The camera must be connected to a network with a stable and unrestricted bandwidth of at least 78.64 Mbps to ensure seamless video streaming without buffering or reduced video quality.
+The camera must be connected to a network with a stable and unrestricted bandwidth of at least 13.82 Mbps to ensure seamless video streaming without buffering or reduced video quality.
 
 ### information about Constraint 1:
 Bandwidth Calculation: 
-Bandwidth = 1280 × 1024 × 30 × 10 × (1/20) = 78,643,200 bps = 78.64 Mbps. 
+The bandwidth with a lower resolution, we reduce the resolution to 720p (1280x720): Bandwidth = 1280 × 720 × 30 × 10 × (1/20) = 13,824,000 bps = 13.82 Mbps.
 The camera provides a video stream with a resolution of 1200 TVL (1280x1024) at 30 fps, using H.264 compression (compression ratio of 20:1 for H.264).
-The required bandwidth is calculated to be 78.64 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
-
-
-## Constraint 2:
-The Camera must achieve a latency below 100 milliseconds to minimize a lag of 0.05 meters in the displayed video, ensuring prompt response and efficient navigation in the crawlspace.
-
-### information about Constraint 2:
-> and excellent latency while minimizing the weight from betafpv.com
-<br>
-the webiste mentioned that the camera has a good latency, so we are assuming the latency is 100 ms
-
-
-> What is a good latency? Any latency at 100 ms or lower is considered decent. from reviews.org
-
-## Constraint 3:
-The camera must be powered by 5 or 12 V.
-- Majority of the components operating voltage is 5 volts
+The required bandwidth is calculated to be 13.82 Mbps. Sufficient bandwidth is essential for seamless video streaming. When the available bandwidth is lower than the required minimum, it can lead to buffering or reduced video quality. The network conditions are unstable or restricted, consistently meeting the bandwidth requirement becomes difficult and impacts the viewing.
 
 
 # Buildable Schematics
@@ -41,10 +25,12 @@ The camera must be powered by 5 or 12 V.
 ## Electrical Schematics
 
 ### Full Schematic
-![FULL-SCHE](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/d04110bb-f6b1-4b17-aaa1-8c3aa1aadfc3)
+![SCHEM UPD](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/998d5dda-b744-4d89-9901-1ade1d2202ef)
+
 
 ### Camera Schematic
-![CAMERA](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/989e90fe-af41-4094-8d42-d036b6f31866)
+![CAMERA](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/19755576-0135-4692-8ceb-e5ab1326b489)
+
 
 
 # Analysis
@@ -71,6 +57,8 @@ The C02 camera requires approximately 78.64 Mbps of bandwidth to stream real-tim
 
 The BetaFPV camera is a small and lightweight camera. It has a higher resolution than the minimum requirement for good video quality. It uses the NTSC system, which supports smooth video at around 30 frames per second. The camera is power-efficient, drawing low current at both 3.3V and 5V. It also offers a wide field of view of 160°. Overall, it is an affordable option that meets video quality requirements while being lightweight and power-efficient. 
 
+The C02 Micro Camera is designed to have low latency, aiming to minimize any noticeable delay or lag in its video transmission.
+
 The camera operates at a DC input of 3-5.5 volts. The power consumption of the camera:
 - at 5V, the current is 110mA or 0.110A. the power consumption is 0.55W. 
 - at 3.3V, the current is 120mA or 0.120A, the power consumption is  0.396W
@@ -78,6 +66,9 @@ The camera operates at a DC input of 3-5.5 volts. The power consumption of the c
 The total power requirement for the camera: 0.55W + 0.396W = 0.946W
 <br>
 The operational time of the camera: 360W / 0.946W = 380 hours
+
+We are connecting the BetaFPV C02 2.1mm 1200TVL FPV Micro Camera to the Raspberry Pi because the Raspberry Pi provides a dedicated Camera Serial Interface (CSI). The CSI interface ensures high-speed, low-latency communication between the camera and the Raspberry Pi, enabling us to capture and process video seamlessly. 
+
 
 
 # BOM
