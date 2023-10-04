@@ -56,7 +56,7 @@ An example of how we will communicate with the sensor:
 
 ![Capture](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/8c94b023-226e-47b6-a670-f79a3ce60f19)
 
-The RD200M is compatible with an Arduino Nano. These serial pins will be used to communicate the RD200M and Arduino Nano [7][8]:  
+The RD200M is compatible with an Arduino Nano. These serial pins will be used to communicate the RD200M and Arduino Nano [7] [8]:  
 ![Capture3](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/edee1df5-697b-4803-802d-eacd862d5010)
 
 
@@ -70,7 +70,9 @@ The sensor is powered by corded electricity with a voltage input of 12 volts and
 
 ## Constraint 5:
 
-The sensor is able to display data in intervals of 1, 10, and 60 minutes. The sensor is able to display data per day and month. The device is able to store data for up to a year
+The sensor is able to collect data in 10-minute intervals. This is currently the best in the market. After comparing this sensor to other approved radon sensors used in the market, the RD200m has the fastest reading time. Though this isn't exactly what we wanted, we think this sensor is the closest to meeting our needs. 
+
+![Capture4](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6712763c-a9f6-4fd7-9d46-ab0b8f4d6893)
 
 # BOM
 
