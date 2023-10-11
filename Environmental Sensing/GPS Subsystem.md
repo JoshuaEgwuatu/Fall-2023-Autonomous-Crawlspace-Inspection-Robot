@@ -22,15 +22,8 @@ The acquired GPS readings shall meet the following accuracy criteria:
    
 
 ## Constraint 3: 
-The required GPS must include a compass: 
-- Obstruction caused by the walls in the crawlspace which leads to approximately 100.45% signal blockage and degradation.
-- Integrating a compass is crucial as it supplements GPS data, compensating for signal loss caused by obstructing walls.
+The GPS repeater shall compensate for signal blockage caused by the crawlspace walls, ensuring a minimum signal strength of 80% for accurate positioning. (please check analysis 3 to see the details)
 
-### More detail about constraint 3:
-The percentage of signal blockage caused by the walls is (99.45 square feet / 99 square feet) x 100 ≈ 100.45%.
-Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace is 99 square feet. By using floor tiles as a reference, with each tile measuring 9 in by 9 in, we can determine that the crawlspace occupies an area of 11 by 11 tiles. The walls of the model crawlspace, constructed with various materials, have a minimum height of 17 in and a maximum height of 36 in. Considering an average height of 26.5 in (2.21 ft), we can calculate the area of the walls. Assuming the walls are straight and uniformly tall, the area of the walls is estimated to be 99.45 square feet.
-
-> "rectangular-shaped model crawlspace was created, with a length of 16.5 ft, a width of 6 ft, and a resulting area of 99 square feet. Floor tiles were used as a reference for quantifying the crawlspace area, with each floor tile having an area of 9 in by 9 in. The walls of the model crawlspace were made with various materials available in the laboratory and had a minimum height of 17 in and a maximum height of 36 in." from the Experimental Data
 
 
 # Buildable Schematics
@@ -45,6 +38,7 @@ Given the length of 16.5 ft and width of 6 ft, the total area of the crawlspace 
 ![GPS](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/fe74239e-dd3b-4562-94a8-5df121465e68)
 
 # Analysis 
+## Analysis 1
 In situations where there are obstacles obstructing the line of sight between the GPS module and the satellites, the limited sky visibility can result in weaker GPS signals and a decrease in signal-to-noise ratio (SNR). We are using the Log-normal Shadowing Model, which considers the distance between the GPS module and the obstacles, allowing for the quantification of signal attenuation caused by the obstacles. 
 
 <br>
@@ -72,8 +66,11 @@ $130-185 W$ for BeiDou-2.
 The path loss $(PL)$ :   Friis transmission equation: $PL = 20log10(d) + 20log10(f) - 147.55$
 
 <br>
- $d$ Distance between the receiver and the satellites = propagation time x radio wave speed
+
+$d$ Distance between the receiver and the satellites = propagation time x radio wave speed
+
 <br>
+
 - Converting the received signal power from $dBm$ to $Watts$: $Ptx = 10^((-125 - 30) / 10) = 0.1$ $fWatt$
 - $wavelength (λ)$: $λ = c / f = 299,792,458 m/s / (1575.42 MHz) = 0.190293 m$
 - Friis transmission equation to find the $distance (d)$ : $d = λ / (4π) * 10^((Ptx - Prx + Gtx + Grx) / 20)$
@@ -162,6 +159,7 @@ Higher SNR values indicate a better quality of service and higher resistance to 
 <br>
 <br>
 
+## Analysis 2
 We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concurrent reception of four GNSS systems: GPS, GLONASS, Galileo, and BeiDou. It is designed to provide exceptional sensitivity and acquisition time for all L1 GNSS signals. The high number of visible satellites (30 for GPS, 24 for GLONASS, 25 for Galileo, and 46 for BeiDou) indicates good satellite availability, which can contribute to improved positioning accuracy. The u-blox Super-S technology enhances RF sensitivity and can improve the dynamic position accuracy in challenging scenarios such as non-line-of-sight environments. The module is equipped with a high-gain 15 x 15 mm² patch antenna, which offers a balance between performance and small size. This omnidirectional antenna radiation pattern provides flexibility in device installation. The GNSS module communicates with the robot's system via UART interface, and the magnetic compass used is the QMC5883L. The power consumption of the module is 13mA, and it operates within a temperature range of -20°C to 80°C. The GNSS module supports the UBX protocol at a default baud rate of 9600, and the NMEA protocol at a 1Hz update rate.
 <br>
 
@@ -169,27 +167,32 @@ We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concur
 
 <br>
 
-GPS accuracy can be improved and signal challenges can be overcome by utilizing compass and mapping techniques. The compass provides the robot's heading information as θ in degrees, enabling it to maintain a sense of direction. Dead reckoning, a mapping technique, estimates the robot's position by considering its previous known position, changes in heading, and distance traveled.
+## Analysis 3
+We need to know if the minimum signal strength of 80% can be achieved. 
 <br>
+The received signal power is given as -125 dBm.
+<br>
+The walls have a minimum height of 17 in (1.42 ft) and a maximum height of 36 in (3 ft). 
+<br>
+Since the crawlspace is rectangular-shaped with a length of 16.5 ft and a width of 6 ft, the total area is 99 square feet. 
+<br>
+The area of the walls = (16.5 + 6) * (1.42 + 3) = 22.5 * 4.42 = 99.45 square feet. 
+<br>
+The percentage of area of the walls = (99.45 / 99) * 100 = 100.45%.
+<br>
+Signal strength = -125 dBm - (-125 dBm * 100.45%) = -125 dBm - (-125 dBm * 1.0045) = -0.56 dBm
+<br>
+we need to know if this meets the minimum signal strength requirement of 80%:
+Signal strength percentage = (-0.56 dBm / -125 dBm) * 100 = 0.45%
+<br>
+Becuase the GPS repeater is insufficient, we will increase the signal strength from 0.45% to 80% by signal repeater system.
+<br>
+The amplification factor for the signal repeater system = 0.8 / 0.0045 ≈ 177.78 and amplification gain = 177.78 ^ (1 / 3) ≈ 5.623
+<br>
+Total amplification factor achieved = 5.623 ^ 3  ≈ 177.98
+<br>
+With three repeaters, we can achieve a total amplification factor of 177.98, We can enhance the GPS signal within the crawlspace and strive to attain the desired signal strength of 80% by setting up a signal repeater system with suitable amplification gains.
 
-x0 = 16.5 ft / 2 = 8.25 ft 
-<br>
-y0 = 6 ft / 2 = 3 ft
-<br>
-d = 16.5 ft
-<br>
-
-As the robot moves through the crawlspace, it can continuously update its position. However, due to uncertainties in measuring distances and changes in direction, errors can accumulate over time.
-<br>
-
-x = 8.25 ft + 16.5 ft * cos(180 degrees)
-   = 8.25 ft - 16.5 ft
-   = -8.25 ft
-<br>
-y = 3 ft + 16.5 ft * sin(180 degrees)
-   = 3 ft + 16.5 ft * 0
-   = 3 ft
-   
 
 # BOM
 | Name of Items |  Description        | Used in which subsystem(s) | Part Number     | Manufacturer   | Quantity | Price     | Total |
@@ -233,4 +236,11 @@ https://gisgeography.com/gps-accuracy-hdop-pdop-gdop-multipath/
 https://www.gps.gov/systems/gps/performance/accuracy/
 
 https://www.sciencedirect.com/topics/earth-and-planetary-sciences/dead-reckoning
+
+https://en.wikipedia.org/wiki/Repeater
+
+https://www.techtarget.com/whatis/definition/amplification-factor-gain
+
+
+
 
