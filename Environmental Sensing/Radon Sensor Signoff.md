@@ -9,7 +9,7 @@ The role of the radon sensor subsystem is to send data to the main MCU by interf
 1. The sensor must be able to read radon levels from 0.5pCi/L to 4.5pCi/L 
     - The average level for a home is 1.3 pCi/L
     - EPA recommends you should consider fixing radon levels if greater than 2pCi/L
-2. The sensor must be able to communicate to the microcontroller using a communicative language (I2C, UART, or SPI protocols)
+2. The sensor must be able to communicate to the microcontroller using serial communication protocol (I2C, UART, or SPI protocols)
     - This will allow the sensor to use the same MCU as other sensors
 3. The sensor must have accuracy within .5pCi/L for good readings
 4. The sensor should be powered by either 5 or 12V.
@@ -22,11 +22,11 @@ The role of the radon sensor subsystem is to send data to the main MCU by interf
 ## 3D Model
 
 ![Capture2](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/68f077dd-3136-4677-801a-17bd6fbe16cf)
-
+<figcaption>Radon Eye RD200M</figcaption>
 
 ## Electrical Schematic
 ### Sensor interface with Arduino
-![picture of schematic](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6e7a44ed-f4f4-434a-824a-002767f83d8c)
+![Screenshot 2023-10-11 015328](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/884d8b19-b6a8-43db-bfe7-a92c0e929788)
 
 ### Overall System Schematic
 ![picture of full schematic](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/b9e9d557-10d1-49e6-9da5-fa5014a4c61c)
@@ -46,7 +46,7 @@ This data is directly pulled from the product’s datasheet
 
 ## Constraint 1:
 
-The radon sensor is able to measure between 0.1 to 99.9 pCi/L. These values work extremely well for what is needed.
+The radon sensor can measure between 0.1 and 99.9 pCi/L. These values work extremely well for what is needed.
 
 ## Constraint 2:
 
@@ -59,6 +59,14 @@ An example of how we will communicate with the sensor:
 The RD200M is compatible with an Arduino Nano. These serial pins will be used to communicate the RD200M and Arduino Nano [7] [8]:  
 ![Capture3](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/edee1df5-697b-4803-802d-eacd862d5010)
 
+UART protocol requires a TX to RX connection and a ground connection. As you can see on the Arduino Nano, PD1 and PD0 are the connections we need to transmit/receive data through UART. These pins operate on a 5V level. This allows them to receive and send data to 5V pins and receive from 3.3V pins:
+
+![Screenshot 2023-10-11 015825](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/4a1cc033-2633-4b21-88aa-125bca789e52)
+<figcaption>Arduino Nano Pin Layout</figcaption>
+
+
+Listed under 3D Models, you can see that the Radon Eye 200M has corresponding pin connections for UART. The TX pins will connect to the RX pins for data transfer between the two components. The voltage difference should not be a problem since we are only receiving data from the sensor. Just in case there is a possibility of damaging the RadonEye RD200 when receiving data from Arduino, a 2k ohm resistor will be used to divide the voltage for functionality.
+
 
 ## Constraint 3:
 
@@ -70,7 +78,7 @@ The sensor is powered by corded electricity with a voltage input of 12 volts and
 
 ## Constraint 5:
 
-The sensor is able to collect data in 10-minute intervals. This is currently the best in the market. After comparing this sensor to other approved radon sensors used in the market, the RD200m has the fastest reading time. Though this isn't exactly what we wanted, we think this sensor is the closest to meeting our needs. 
+The sensor can collect data in 10-minute intervals. This is currently the best in the market. After comparing this sensor to other approved radon sensors used in the market, the RD200m has the fastest reading time. Though this is not exactly what we wanted, this sensor is the closest to meeting our needs. 
 
 ![Capture4](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6712763c-a9f6-4fd7-9d46-ab0b8f4d6893)
 
