@@ -22,8 +22,7 @@ The acquired GPS readings shall meet the following accuracy criteria:
    
 
 ## Constraint 3: 
-The GPS repeater shall compensate for signal blockage caused by the crawlspace walls, ensuring a minimum signal strength of 80% for accurate positioning. (please check analysis 3 to see the details)
-
+The Autonomous Crawlspace Inspection Robot must integrate GPS and compass functionalities to accurately determine its global position and heading. GPS technology will provide latitude (36° 10' 48.2" N) and longitude (85° 27' 30" W) coordinates for precise global positioning, while the compass will ensure accurate orientation relative to the Earth's magnetic field. 
 
 
 # Buildable Schematics
@@ -168,30 +167,33 @@ We are using M10Q-5883 GNSS GPS & Compass Module and this module supports concur
 <br>
 
 ## Analysis 3
-We need to know if the minimum signal strength of 80% can be achieved. 
-<br>
-The received signal power is given as -125 dBm.
-<br>
-The walls have a minimum height of 17 in (1.42 ft) and a maximum height of 36 in (3 ft). 
-<br>
-Since the crawlspace is rectangular-shaped with a length of 16.5 ft and a width of 6 ft, the total area is 99 square feet. 
-<br>
-The area of the walls = (16.5 + 6) * (1.42 + 3) = 22.5 * 4.42 = 99.45 square feet. 
-<br>
-The percentage of area of the walls = (99.45 / 99) * 100 = 100.45%.
-<br>
-Signal strength = -125 dBm - (-125 dBm * 100.45%) = -125 dBm - (-125 dBm * 1.0045) = -0.56 dBm
-<br>
-we need to know if this meets the minimum signal strength requirement of 80%:
-Signal strength percentage = (-0.56 dBm / -125 dBm) * 100 = 0.45%
-<br>
-Becuase the GPS repeater is insufficient, we will increase the signal strength from 0.45% to 80% by signal repeater system.
-<br>
-The amplification factor for the signal repeater system = 0.8 / 0.0045 ≈ 177.78 and amplification gain = 177.78 ^ (1 / 3) ≈ 5.623
-<br>
-Total amplification factor achieved = 5.623 ^ 3  ≈ 177.98
-<br>
-With three repeaters, we can achieve a total amplification factor of 177.98, We can enhance the GPS signal within the crawlspace and strive to attain the desired signal strength of 80% by setting up a signal repeater system with suitable amplification gains.
+
+The Autonomous Crawlspace Inspection Robot will be equipped with GPS and compass integration to accurately determine its global position and heading. 
+
+we need to calculate the distance 
+- Robot's Latitude = 36° 10' 48.2" N = 36.180056°
+- Robot's Longitude = 85° 27' 30" W = -85.458333°
+
+Haversine formula:
+a = sin²((0.630017 - 0.630017) / 2) + cos(0.630017) * cos(0.630017) * sin²((-1.490907 - (-1.491040)) / 2)
+= sin²(0) + cos(0.630017) * cos(0.630017) * sin²(0.000133)
+= 0.000000001999999996
+
+c = 2 * atan2(√0.000000001999999996, √(1 - 0.000000001999999996))√
+c = 0.000002828
+
+d = 6371 * 0.000002828
+d ≈ 0.018 km or 0.011 miles 
+note:  R is the Earth's radius (6,371 km)
+
+we need to calculate the heading with 
+- Compass Reading  = 36° 10' 30" N = 36.175°
+- Magnetic Declination = -5° 2' (west) = -5.033°
+
+heading = 36.175° + (-5.033°) ≈ 31.142°
+
+The integration of GPS and compass data enables the Autonomous Crawlspace Inspection Robot to precisely identify its location and direction on a global scale. This integration empowers the robot to effectively navigate and carry out inspections within the crawlspace environment, ensuring efficient and accurate operations.
+
 
 
 # BOM
@@ -240,6 +242,18 @@ https://www.sciencedirect.com/topics/earth-and-planetary-sciences/dead-reckoning
 https://en.wikipedia.org/wiki/Repeater
 
 https://www.techtarget.com/whatis/definition/amplification-factor-gain
+
+https://community.esri.com/t5/coordinate-reference-systems-blog/distance-on-a-sphere-the-haversine-formula/ba-p/902128
+
+https://community.openspace.ai/industry-chat-for-fun-42/how-to-use-online-compass-590
+
+https://sciencing.com/what-parallels-maps-4689046.html
+
+https://www.nwcg.gov/course/ffm/location/65-declination
+
+https://onlinecompass.net
+
+https://www.magnetic-declination.com
 
 
 
