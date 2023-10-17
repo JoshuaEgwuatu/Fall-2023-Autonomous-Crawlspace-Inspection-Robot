@@ -1,6 +1,5 @@
 # Function of the subsystem:
-Using the compass to enables the robot to determine its heading, maintain orientation, avoid obstacles, and optimize path planning, which to enhance the wall avoidance algorithm for navigation and the ROS Hector SLAM algorithm for mapping.
-
+Using the compass enables the robot to determine its orientation and optimize path planning.
 
 # Constraints:
 
@@ -8,7 +7,7 @@ Using the compass to enables the robot to determine its heading, maintain orient
  the system shall choose the suitable sensitivity setting within the range of 0 to 7, resulting in an LSB value of approximately ±0.000214 Ga, and shall implement shielding techniques.
 
 ## Constraint 2- Precision Limitations: 
-with a gain setting of ±0.88 Gauss and a digital resolution of 0.73 mG/LSb, shall be considered for their precision limitations when using compass data for accurate path planning and mapping. To ensure enhanced accuracy, error estimation or filtering techniques shall be applied, effectively addressing potential errors in the measured magnetic field values.
+The compass must have accurate readings within ± 3 degrees Gauss and a digital resolution of 0.73 mG/LSb, shall be considered for their precision limitations when using compass data for accurate path planning and mapping. To ensure enhanced accuracy, error estimation or filtering techniques shall be applied, effectively addressing potential errors in the measured magnetic field values.
 
 ## Constraint 3- Sensor Calibration: 
 The compass sensor shall undergo periodic calibration, using a regular routine, to maintain accurate readings and compensate for variations in magnetic fields, ensuring precise path planning and mapping (with a correction factor of approximately 1.7045 LSb to compensate for a consistent bias of 1.5 Gauss).
@@ -43,7 +42,19 @@ The compass sensor shall undergo periodic calibration, using a regular routine, 
 
 # Analysis 
 
-## Table of HMC5883L that contain all the values that used in the analysis 
+## Table of HMC5883L Values Used in the Analysis
+
+| Parameter                       | Value                            |
+|---------------------------------|----------------------------------|
+| Gain Settings                   | ±0.88 Gauss                      |
+| Digital Resolution              | 0.73 mG/LSb                      |
+| Measurement Range               | ±8 Gauss                         |
+| Operating Voltage               | 2.16V to 3.6V                    |
+| Operating Current               | 100 μA at 1.8V (typical)         |
+| Temperature Range               | -40°C to +85°C                   |
+| Wide Magnetic Field Range       | ±8 Oe                            |
+| Compass Heading Accuracy        | 1° to 2° degrees                 |
+| Noise Floor (Field Resolution)  | 2 milli-gauss (typical)          |
 
 ## Analysis 1
 Sensitivity (Gain) = 230 LSb/gauss
