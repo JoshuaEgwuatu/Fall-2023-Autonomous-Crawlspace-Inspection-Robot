@@ -1,5 +1,5 @@
 # Function of the subsystem:
-Using the compass enables the robot to determine its orientation and optimize path planning.
+The compass subsystem continuously reads and processes data to calculate the robot's heading, enabling navigation, mapping, and overlaying the robot's map onto a satellite map in the autonomous crawlspace inspection robot.
 
 # Constraints:
 
