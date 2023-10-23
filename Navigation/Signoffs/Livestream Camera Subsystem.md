@@ -15,8 +15,7 @@ The camera shall be supported with a minimum data rate of 1,492.992 Mbps to ensu
 WiFi connection should provide a minimum data rate of 1,492.992 Mbps to minimize latency during video streaming.
 
 ## Constraint 3 - Light: 
-Thw camera shall be designed to achieve a minimum luminous flux of 0.5 Lumens, ensuring an illuminance level of 0.5 Lux on the sensor surface to meet the light constraint.
-
+The camera subsystem shall provide a live video feed with night vision capabilities, enabling real-time navigation of the robot in pitch black environments up to a distance of 12 meters (40 ft.) with clear visibility.
 
 # Buildable Schematics
 ## 3D Model
@@ -91,19 +90,23 @@ Data rate = 49.7664 Mbps * 30 fps = 1,492.992 Mbps
 
 ## Analysis 3:
 
-- The minimum illumination requirement = 0.5 Lux.
-- Camera's sensor area = A = 1
+specifications: 
+- the crawl space is completely dark
+- no external light source. 
+- the camera's IR LEDs will be the primary source of illumination. 
+- the camera's infrared (IR) night vision feature, coupled with its upgraded optical configuration, enables clear imaging up to a distance of 12 meters (40 ft.) in dim light conditions.
+- camera's minimum illumination specification of 0.5 Lux @(F2.2, AGC ON)
+
+we need to calculate the minimum illuminance 
+(provided by the camera in Lux)
+
+Illuminance = 0.5 Lux / (12^2) = 0.00347 Lux
 
 <br>
 
-luminous flux = F = E * A
+note: the 12 is the disctance 
 
-<br>
-
-F = 0.5 Lux * 1 square meter = 0.5 Lumens
-
-the camera should achieve a minimum luminous flux of 0.5 Lumens to provide the desired illuminanc level of 0.5 Lux on the sensor surface.
-
+With a minimum illumination of 0.00347 Lux at the designated distance, the camera subsystem is  provide a live video feed in low-light situations. The camera's IR LEDs serve as the primary source of illumination, enabling the operator to navigate the robot in real-time with ample visual information, even in the absence of external lighting. By utilizing the camera's IR capabilities and its ability to function in pitch black environments, 
 
 # BOM
 
