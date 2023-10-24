@@ -100,7 +100,7 @@ The motor's load capacity exceeds the minimum requirement by more than 75%, indi
 |Name of Items          |Description                                                             |Used in which subsystem(s)|Part Number       |Manufacturer           |Quantity  |Price  |Total  |
 |-----------------------|------------------------------------------------------------------------|--------------------------|------------------|-----------------------|----------|-------|-------|
 |Metal DC Geared Motor  |12V motor with a 90:1 metal gearbox and an integrated quadrature encoder|Movement                  |GB37Y3530-12V-90EN|DFROBOT                |1         |$29.00 |$29.00 |
-|LiFePO4 12.8VDC Battery|Custom LiFePO4 26650 Battery: 12.8V 6.6Ah (84Wh 14A Rate)               |Power                     |CU-MM167          |AA Portable Power Corp.|1         |$98.95 |$127.95|
+
 
 
 
