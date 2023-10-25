@@ -28,6 +28,9 @@ The camera subsystem shall provide a live video feed with night vision capabilit
 
 <img width="753" alt="Screen Shot 2023-10-22 at 3 40 05 PM" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/b7d04c72-3d42-4dbb-ac3a-afd1d69c666c">
 
+## Electrical Schematic
+![Screenshot 2023-10-25 140205](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/19a2b90d-e7ed-4c2b-a136-a97e425d463f)
+
 
 ## How to connect 
 
