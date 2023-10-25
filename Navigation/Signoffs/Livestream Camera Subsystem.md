@@ -28,6 +28,11 @@ The camera subsystem shall provide a live video feed with night vision capabilit
 
 <img width="753" alt="Screen Shot 2023-10-22 at 3 40 05 PM" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/b7d04c72-3d42-4dbb-ac3a-afd1d69c666c">
 
+## Full Electrical Schematic
+
+![full schem](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/71fe8f60-4ba3-4a1c-a9ae-af3539720483)
+
+
 ## Electrical Schematic
 ![Screenshot 2023-10-25 140205](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/19a2b90d-e7ed-4c2b-a136-a97e425d463f)
 
@@ -115,8 +120,8 @@ With a minimum illumination of 0.00347 Lux at the designated distance, the camer
 
 | Name of Items | Description                 | Used in which subsystem(s)  | Part Number | Manufacturer     | Quantity | Price      | Total  |
 | --------------| --------------------------- | --------------------------- | ----------- | ---------------- | -------- | ---------- | ------ |
-| ezviz c1c     | 1080p indoor wifi camera    | Livestream Camera Subsystem | ezviz c1c   | ezviz            | 1        | $19.99     | $19.99 |
-|               |                             |                             |             | Total Components | 1        | Total Cost | $19.99 |
+| ezviz c1c     | 1080p indoor wifi camera    | Livestream Camera Subsystem | ezviz c1c   | ezviz            | 1        | $29.99     | $29.99 |
+|               |                             |                             |             | Total Components | 1        | Total Cost | $29.99 |
 
 
 # References
