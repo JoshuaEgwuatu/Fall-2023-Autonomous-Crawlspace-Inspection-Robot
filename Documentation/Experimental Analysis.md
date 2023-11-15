@@ -1,18 +1,48 @@
 # Experimental Analysis
 
-##  Compass:
+##  Compass Experiment:
 
-### Explanation of the experimental design (what you did and what it was intended to measure)
+### Experimental Design:
 The objective of this test is to verify the performance of the compass subsystem. The compass readings were obtained along the x, y, and z axes, which play a crucial role in navigation and orientation. The table below presents the recorded x, y, and z values for each measurement, providing insights into the performance of the compass subsystem.
 
-### Data Table:
-interpretation of the data (interpreting the data requires the writer to explain what the results of the experiments mean and an analysis of the cause of any unexpected results).    
+### Interpretation of the data:
+Data Table:
+ 
+| Measurement | Raw X | Raw Y | Raw Z |
+|-------------|-------|-------|-------|
+| 1           | -34   | 14    | 149   |
+| 2           | -32   | -66   | 147   |
+| 3           | -103  | -50   | 121   |
+| 4           | 15    | 32    | 138   |
+| 5           | -80   | -89   | 117   |
+| 6           | -82   | -97   | 115   |
+
+- The first data point (1700025251.722397) shows relatively low values in the X-axis (-34) and Y-axis (14), with a moderate value in the Z-axis (149).
+- The second data point (1700025254.742771) exhibits low values in the X-axis (-32) and Y-axis (-66), with a moderate value in the Z-axis (147).
+- The third data point (1700025259.776896) displays a more negative value in the X-axis (-103) and a moderately negative value in the Y-axis (-50). The Z-axis value (121).
+- The fourth data point (1700025261.790216) demonstrates a positive value in the X-axis (15) and a positive value in the Y-axis (32). The Z-axis value (138).
+- The fifth data point (1700025264.810830) shows a negative value in the X-axis (-80) and a negative value in the Y-axis (-89). The Z-axis value (117).
+- The sixth data point (1700025268.838013) exhibits a negative value in the X-axis (-82) and a negative value in the Y-axis (-97). The Z-axis value (115).
+
+Overall, these data points are more representative of a stable magnetic field.
+
 
 
 ## Motor
 
-### Explanation of the experimental design (what you did and what it was intended to measure)
+### Experimental Design:
 The motor subsystem can navigate steep inclines of up to 30 degrees and challenging environments. Motor encoders and advanced control algorithms ensure accurate speed measurement for real-time feedback. 
 
-### Data Table:
-interpretation of the data (interpreting the data requires the writer to explain what the results of the experiments mean and an analysis of the cause of any unexpected results).    
+### Interpretation of the data:
+Data Table:
+
+| Incline Angle | Croomba Ascension  |
+|---------------|--------------------|
+| 30            |                    |
+| 30            |                    |
+| 30            |                    |
+| 25            |                    |
+| 20            |                    |
+| 15            |                    |
+| 15            |                    |
+
