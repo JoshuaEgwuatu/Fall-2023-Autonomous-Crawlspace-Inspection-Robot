@@ -26,6 +26,10 @@ Data Table:
 
 Overall, these data points are more representative of a stable magnetic field.
 
+<img width="769" alt="Screenshot 2023-11-20 at 1 42 31 PM" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/0ffc31f5-3296-4297-a3fc-4917b83d9613">
+
+
+
 
 
 ## Motor
