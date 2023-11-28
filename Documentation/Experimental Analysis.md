@@ -34,29 +34,100 @@ The compass readings were compared by rotating the compass in different directio
 
 
 
-## Motor
+## Motor/Chassis Experiment:
 
-### Experimental Design:
-The motor subsystem can navigate steep inclines of up to 30 degrees and challenging environments. Motor encoders and advanced control algorithms ensure accurate speed measurement for real-time feedback. Wooden planks are used with a ramp to simulate an incline. Each ramp is approximately showing 5-degrees. A cloth was used later in the experiment due to problems with treads sliding on the ramp surface. This also better represents real-world application. An asterisk (*) will be put in for all the places the cloth was used.
+### Experimental Objective/Goal:
+The objective of the motor/chassis experiment is to prove that the Croomba can navigate inclines of up to 30 degrees. Reaching this goal will prove that the Croomba is able to handle various environments, showing the versatility of the robot. To test this, the Croomba will navigate on both slick and carpet surfaces while on incline.
+
+### Croomba Adjustments:
+The Croomba has received updates to both the chassis and motor.
+
+### Experimental Design/Procedure:
+This experiment is conducted with materials found in our lab. Wooden planks are stacked up with a ramp to simulate an incline. Each plank added shows an incline increase of 5 degrees. An angle finder was used to confirm angle measurements. The robot will start at the beginning of a wooden slab and move until it has attempted to clear the incline. 10 Trials will be run for each incline. The first 5 trials will be on a slick wooden surface while the last 5 trials will be on a carpet-like surface. 
+
 ![IMG_5389](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/84891ef0-8833-40f2-80e5-de6bdbc2fa3c)
+Caption: Experiment Set-up
 
 ### Interpretation of the data:
-Data Table:
 
-| Incline Angle | Croomba Ascension  |
-|---------------|--------------------|
-| 30*            | No                   |
-| 30*            | No                   |
-| 25*            | Yes!                   |
-| 25*            | Yes!                   |
-| 20*            | Yes!                   |
-| 20*            | Yes!                   |
-| 15*            | Yes!                   |
-| 15            | No                   |
-| 10            | Yes!                   |
-| 10            | Yes!                   |
-| 5            | Yes!                   |
-| 5            | Yes!                   |
+#### 5 Degree Incline:
 
-As you can see we are very close to our goal!
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    | Yes               | Yes            |
+| 2    | Yes               | Yes            |
+| 3    | Yes               | Yes            |
+| 4    | Yes               | Yes            |
+| 5    | Yes               | Yes            |
+
+#### 10 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    | Yes               | Yes            |
+| 2    | Yes               | Yes            |
+| 3    | Yes               | Yes            |
+| 4    | Yes               | Yes            |
+| 5    | Yes               | Yes            |
+
+#### 15 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    |                |             |
+| 2    |                |             |
+| 3    |                |             |
+| 4    |                |             |
+| 5    |                |             |
+
+#### 20 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    |                |             |
+| 2    |                |             |
+| 3    |                |             |
+| 4    |                |             |
+| 5    |                |             |
+
+#### 25 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    |                |             |
+| 2    |                |             |
+| 3    |                |             |
+| 4    |                |             |
+| 5    |                |             |
+
+#### 30 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    |                |             |
+| 2    |                |             |
+| 3    |                |             |
+| 4    |                |             |
+| 5    |                |             |
+
+#### 35 Degree Incline:
+
+|      | Slick Surface     | Carpet Surface |
+| ---- | ----------------- | -------------- |
+| Test | Croomba Ascension |
+| 1    |                |             |
+| 2    |                |             |
+| 3    |                |             |
+| 4    |                |             |
+| 5    |                |             |
+
+### Analysis of Experiment:
+
+
 
