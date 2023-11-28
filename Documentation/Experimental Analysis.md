@@ -35,7 +35,7 @@ Overall, these data points are more representative of a stable magnetic field.
 ## Motor
 
 ### Experimental Design:
-The motor subsystem can navigate steep inclines of up to 30 degrees and challenging environments. Motor encoders and advanced control algorithms ensure accurate speed measurement for real-time feedback. 
+The motor subsystem can navigate steep inclines of up to 30 degrees and challenging environments. Motor encoders and advanced control algorithms ensure accurate speed measurement for real-time feedback. Wooden planks are used with a ramp to simulate an incline. Each ramp is approximately showing 5-degrees. A cloth was used later in the experiment due to problems with treads sliding on the ramp surface. This also better represents real-world application. An asterisk (*) will be put in for all the places the cloth was used.
 
 ### Interpretation of the data:
 Data Table:
@@ -44,8 +44,8 @@ Data Table:
 |---------------|--------------------|
 | 30            | No                   |
 | 30            | No                   |
-| 25            | No                   |
-| 25            | No                   |
+| 25            | Yes!                   |
+| 25            | Yes!                   |
 | 20            | Yes!                   |
 | 20            | Yes!                   |
 | 15            | Yes!                   |
@@ -54,4 +54,6 @@ Data Table:
 | 10            | Yes!                   |
 | 5            | Yes!                   |
 | 5            | Yes!                   |
+
+As you can see we are very close to our goal!
 
