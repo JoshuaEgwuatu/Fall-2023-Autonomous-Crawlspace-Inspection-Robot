@@ -7,26 +7,28 @@ The objective of this test is to verify the performance of the compass subsystem
 
 ### Interpretation of the data:
 Data Table:
- 
-| Measurement | Raw X | Raw Y | Raw Z |
-|-------------|-------|-------|-------|
-| 1           | -34   | 14    | 149   |
-| 2           | -32   | -66   | 147   |
-| 3           | -103  | -50   | 121   |
-| 4           | 15    | 32    | 138   |
-| 5           | -80   | -89   | 117   |
-| 6           | -82   | -97   | 115   |
+|    Raw X   |   Raw Y  |   Raw Z  |   Heading  |
+|------------|----------|----------|------------|
+|     -5     |    40    |    -97   |   97.13    |
+|    -22     |    26    |   -108   |   130.24   |
+|    -45     |   -99    |   -150   |   245.56   |
+|    -61     |   -109   |   -141   |   240.77   |
+|    100     |   -37    |   -143   |   339.70   |
+|     2      |    46    |    -81   |   87.51    |
+|    -72     |    17    |    -80   |   166.72   |
+|   -103     |     9    |    -52   |   175.01   |
+|   -117     |   -80    |    -76   |   214.36   |
 
-- The first data point (1700025251.722397) shows relatively low values in the X-axis (-34) and Y-axis (14), with a moderate value in the Z-axis (149).
-- The second data point (1700025254.742771) exhibits low values in the X-axis (-32) and Y-axis (-66), with a moderate value in the Z-axis (147).
-- The third data point (1700025259.776896) displays a more negative value in the X-axis (-103) and a moderately negative value in the Y-axis (-50). The Z-axis value (121).
-- The fourth data point (1700025261.790216) demonstrates a positive value in the X-axis (15) and a positive value in the Y-axis (32). The Z-axis value (138).
-- The fifth data point (1700025264.810830) shows a negative value in the X-axis (-80) and a negative value in the Y-axis (-89). The Z-axis value (117).
-- The sixth data point (1700025268.838013) exhibits a negative value in the X-axis (-82) and a negative value in the Y-axis (-97). The Z-axis value (115).
+<img width="519" alt="image" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/2f00c669-badd-4002-95ee-1d1bf263472c">
 
-Overall, these data points are more representative of a stable magnetic field.
+- Raw X: This column represents the raw X-axis value measured by the compass.
+- Raw Y: This column represents the raw Y-axis value measured by the compass.
+- Raw Z: This column represents the raw Z-axis value measured by the compass.
+- Heading: This column represents the heading angle in degrees, which indicates the direction the compass is pointing.
 
-<img width="769" alt="Screenshot 2023-11-20 at 1 42 31 PM" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/0ffc31f5-3296-4297-a3fc-4917b83d9613">
+For each set of measurements, the values for Raw X, Raw Y, and Raw Z indicate the magnetic field strength along the respective axes. The Heading value indicates the angle in degrees relative to a reference direction  (north).
+
+The compass readings were compared by rotating the compass in different directions and noting any deviations. The experiments conducted sufficiently established the value of the compass subsystem. 
 
 
 
