@@ -39,6 +39,8 @@ The collected compass data, taken in both the Capstone lab and outside the build
 
 - Sensor Calibration: The periodic calibration, incorporating the correction factor of approximately 1.7045 LSb, compensates for the consistent bias of 1.5 Gauss, ensuring accurate readings.
 
+<img width="362" alt="image" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/919b4ba9-9635-4c6f-85e2-4b162952bc78">
+
 The experimental analysis indicates that the compass, with the implemented measures and calibration, meets the specified constraints and measures of success.
 
 
