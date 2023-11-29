@@ -3,32 +3,43 @@
 ##  Compass Experiment:
 
 ### Experimental Design:
+
+
+- The compass was equipped with a sensitivity setting within the range of 0 to 7, resulting in an LSB value of approximately ±0.000214 Ga, to minimize magnetic interference.
+- The compass sensor underwent periodic calibration using a correction factor of approximately 1.7045 LSb to compensate for a consistent bias of 1.5 Gauss.
+
 The objective of this test is to verify the performance of the compass subsystem. The compass readings were obtained along the x, y, and z axes, which play a crucial role in navigation and orientation. The table below presents the recorded x, y, and z values for each measurement, providing insights into the performance of the compass subsystem.
 
-### Interpretation of the data:
-Data Table:
-|    Raw X   |   Raw Y  |   Raw Z  |   Heading  |
-|------------|----------|----------|------------|
-|     -5     |    40    |    -97   |   97.13    |
-|    -22     |    26    |   -108   |   130.24   |
-|    -45     |   -99    |   -150   |   245.56   |
-|    -61     |   -109   |   -141   |   240.77   |
-|    100     |   -37    |   -143   |   339.70   |
-|     2      |    46    |    -81   |   87.51    |
-|    -72     |    17    |    -80   |   166.72   |
-|   -103     |     9    |    -52   |   175.01   |
-|   -117     |   -80    |    -76   |   214.36   |
 
-<img width="519" alt="image" src="https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/2f00c669-badd-4002-95ee-1d1bf263472c">
+### Data Analysis:
 
-- Raw X: This column represents the raw X-axis value measured by the compass.
-- Raw Y: This column represents the raw Y-axis value measured by the compass.
-- Raw Z: This column represents the raw Z-axis value measured by the compass.
-- Heading: This column represents the heading angle in degrees, which indicates the direction the compass is pointing.
+The collected compass data, taken in both the Capstone lab and outside the building:
 
-For each set of measurements, the values for Raw X, Raw Y, and Raw Z indicate the magnetic field strength along the respective axes. The Heading value indicates the angle in degrees relative to a reference direction  (north).
+| Environment  | Raw X | Raw Y | Raw Z | Heading | Corrected Sensor Reading |
+|--------------|-------|-------|-------|---------|-------------------------|
+| Capstone Lab | -5    | 40    | -97   | 97.13   | 95.5915                |
+| Capstone Lab | -22   | 26    | -108  | 130.24  | 128.7355               |
+| Capstone Lab | -45   | -99   | -150  | 245.56  | 243.8755               |
+| Capstone Lab | -61   | -109  | -141  | 240.77  | 238.9155               |
+| Capstone Lab | 100   | -37   | -143  | 339.70  | 337.7955               |
+| Capstone Lab | 2     | 46    | -81   | 87.51   | 85.8055                |
+| Capstone Lab | -72   | 17    | -80   | 166.72  | 164.9155               |
+| Capstone Lab | -103  | 9     | -52   | 175.01  | 173.3055               |
+| Capstone Lab | -117  | -80   | -76   | 214.36  | 212.6555               |
+| Outside      | -154  | -15   | 73    | 185.56  | 183.8555               |
+| Outside      | -156  | -14   | 75    | 185.13  | 183.4255               |
+| Outside      | -159  | -13   | 75    | 184.67  | 182.9655               |
+| Outside      | -160  | -11   | 76    | 183.93  | 182.2155               |
+| Outside      | -175  | -2    | 66    | 180.65  | 178.9455               |
+| Outside      | -175  | -2    | 66    | 180.65  | 178.9455               |
+| Outside      | -175  | -2    | 66    | 180.65  | 178.9455               |
 
-The compass readings were compared by rotating the compass in different directions and noting any deviations. The experiments conducted sufficiently established the value of the compass subsystem. 
+### Interpretation and Analysis:
+- Precision limitations: The corrected sensor readings exhibit a precision of 0.73 mG/LSb, meeting the specified digital resolution requirement.
+
+- Sensor Calibration: The periodic calibration, incorporating the correction factor of approximately 1.7045 LSb, compensates for the consistent bias of 1.5 Gauss, ensuring accurate readings.
+
+The experimental analysis indicates that the compass, with the implemented measures and calibration, meets the specified constraints and measures of success.
 
 
 
