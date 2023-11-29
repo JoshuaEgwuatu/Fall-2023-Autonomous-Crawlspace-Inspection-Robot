@@ -61,7 +61,7 @@ This experiment is conducted with materials found in our lab. Wooden planks are 
 ![IMG_5389](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/84891ef0-8833-40f2-80e5-de6bdbc2fa3c)
 Caption: Experiment Set-up
 
-### Interpretation of the data:
+### Results of Experiment:
 
 #### 5 Degree Incline:
 
@@ -90,57 +90,49 @@ Caption: Experiment Set-up
 |      | Slick Surface     | Carpet Surface |
 | ---- | ----------------- | -------------- |
 | Test | Croomba Ascension |
-| 1    |                |             |
-| 2    |                |             |
-| 3    |                |             |
-| 4    |                |             |
-| 5    |                |             |
+| 1    | No               | Yes            |
+| 2    | No               | Yes            |
+| 3    | No               | Yes            |
+| 4    | No               | Yes            |
+| 5    | No               | Yes            |
 
 #### 20 Degree Incline:
 
 |      | Slick Surface     | Carpet Surface |
 | ---- | ----------------- | -------------- |
 | Test | Croomba Ascension |
-| 1    |                |             |
-| 2    |                |             |
-| 3    |                |             |
-| 4    |                |             |
-| 5    |                |             |
+| 1    | No               | Yes            |
+| 2    | No               | Yes            |
+| 3    | No               | Yes            |
+| 4    | No               | Yes            |
+| 5    | No               | Yes            |
 
 #### 25 Degree Incline:
 
 |      | Slick Surface     | Carpet Surface |
 | ---- | ----------------- | -------------- |
 | Test | Croomba Ascension |
-| 1    |                |             |
-| 2    |                |             |
-| 3    |                |             |
-| 4    |                |             |
-| 5    |                |             |
+| 1    | No               | Yes            |
+| 2    | No               | Yes            |
+| 3    | No               | Yes            |
+| 4    | No               | Yes            |
+| 5    | No               | Yes            |
 
 #### 30 Degree Incline:
 
 |      | Slick Surface     | Carpet Surface |
 | ---- | ----------------- | -------------- |
 | Test | Croomba Ascension |
-| 1    |                |             |
-| 2    |                |             |
-| 3    |                |             |
-| 4    |                |             |
-| 5    |                |             |
-
-#### 35 Degree Incline:
-
-|      | Slick Surface     | Carpet Surface |
-| ---- | ----------------- | -------------- |
-| Test | Croomba Ascension |
-| 1    |                |             |
-| 2    |                |             |
-| 3    |                |             |
-| 4    |                |             |
-| 5    |                |             |
+| 1    | No               | No            |
+| 2    | No               | No            |
+| 3    | No               | No            |
+| 4    | No               | No            |
+| 5    | No               | No            |
 
 ### Analysis of Experiment:
+After reviewing the experiment, the Croomba has made huge progress. Previously, the Croomba would flip backward due to improper weight distribution. Now, at most, it just continues to move in place. Previously, the maximum incline the Croomba could climb was 15 degrees. Currently, the Croomba can handle 25 degrees. The Croomba was able to handle 0-10 degrees without any issues. At 15 degrees, the Croomba was not able to climb the slick wooden surface. We think this is because of the current tracks on the Croomba. The tracks currently used are engineering plastic. The Croomba was able to climb the 15-degree incline when on the carpet surface. This was because the tracks had more traction on this surface. During the 20-30 degree test, the Croomba had the same results during the slick surface test. Due to weight, the Croomba was unable to climb the 30-degree incline on the carpet surface. The change in design for the chassis along with the change of motors has helped the goal become more obtainable. We hope that the next Croomba revision will be able to meet our goal.
 
+### Possible Solutions:
+Replacing the tracks on the Croomba will help with its difficulty climbing certain surfaces. Increasing the motor speed is another possibility.
 
 
