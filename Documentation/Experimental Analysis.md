@@ -58,7 +58,7 @@ The Croomba has received updates to both the chassis and motor.
 ### Experimental Design/Procedure:
 This experiment is conducted with materials found in our lab. Wooden planks are stacked up with a ramp to simulate an incline. Each plank added shows an incline increase of 5 degrees. An angle finder was used to confirm angle measurements. The robot will start at the beginning of a wooden slab and move until it has attempted to clear the incline. 10 Trials will be run for each incline. The first 5 trials will be on a slick wooden surface while the last 5 trials will be on a carpet-like surface. 
 
-![IMG_5389](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/84891ef0-8833-40f2-80e5-de6bdbc2fa3c)
+![IMG_5411](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/eae6ceb0-a2b5-4ba0-8828-72b634db60ae)
 Caption: Experiment Set-up
 
 ### Results of Experiment:
