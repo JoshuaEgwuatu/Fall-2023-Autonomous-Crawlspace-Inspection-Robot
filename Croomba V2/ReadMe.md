@@ -11,17 +11,25 @@ This is the second version of the Autonomous Crawlspace Inspection Robot, which 
 3. Increased Incline Handling: The robot's mobility has been significantly enhanced, allowing it to handle inclines of up to 25 degrees. This improvement in the robot's climbing capability enables it to access and inspect areas with steeper angles, expanding its operational scope.
    
 ## Capabilities
+### V1 Capabilities
+* Low-level autonomy which allows the robot to navigate through an enclosed area
+* Creating a map of the area using the SLAM algorithm
+* Take pictures throughout an area and stitch simple areas into a singular, larger image
+* Collect humidity, temperature, and moisture content data and overlay information on images
+* Supply power for consistent operation across all components
+* Robot movement through serial commands and return encoder data to the main microcontroller
+* Manual control through text-based commands while also streaming live video to the operator
 
-Compass Subsystem:
-- The compass subsystem continuously reads and processes data to calculate the robot's heading.
-- The sensitivity setting within the range of 0 to 7 minimizes magnetic interference, resulting in accurate readings.
-- Periodic calibration with a correction factor compensates for a consistent bias, ensuring precise and reliable compass readings.
-
-Motor/Chassis Subsystem:
-- The motor/chassis subsystem enhances the mechanical features of the robot's movement.
-- It enables the robot to ascend a 30-degree incline, expanding its ability to navigate through various crawlspace environments.
-- Previous limitations, such as flipping backward and limited incline climbing, have been addressed through design changes in the chassis and the use of improved motors.
-- The current iteration of the robot can handle inclines of up to 25 degrees, with improved traction on carpeted surfaces.
+### V2 Current Capabilities
+* Low-level autonomy which allows the robot to navigate through an enclosed area
+* Creating a map of the area using the SLAM algorithm
+* Take pictures throughout an area and stitch simple areas into a singular, larger image
+* Collect humidity, temperature, and moisture content data and overlay information on images
+* Supply power for consistent operation across all components
+* Robot movement through serial commands and return encoder data to the main microcontroller
+* Manual control through text-based commands while also streaming live video to the operator
+* Continuously reading and processes data to calculate the Croomba's heading.
+* Able to handle inclines of up to 25 degrees, with improved traction on carpeted surfaces.
 
 ## Salient Outcomes
 
@@ -42,7 +50,7 @@ picture
 ## Cut Subsystems with explanation
 - Live Stream subsystem
   - reason: 
-- Randon Subsystem
+- Radon Subsystem
   - reason:
 
     
