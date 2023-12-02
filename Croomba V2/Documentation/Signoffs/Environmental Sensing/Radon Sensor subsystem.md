@@ -1,3 +1,6 @@
+The vision subsystem was cut due to not recieving sensors.
+
+ 
 # Radon Sensor Signoff
 
 # Function of the subsystem
