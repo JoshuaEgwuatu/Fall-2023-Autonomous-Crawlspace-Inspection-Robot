@@ -36,11 +36,11 @@ This is the second version of the Autonomous Crawlspace Inspection Robot, which 
 
 
 ## Project Demonstration & Images
-### Video of Robot at Competition
-Video of the robot click here
+### Video
+Video of the robot click [here](https://drive.google.com/file/d/1BlidPwFD-7A3Lk9YjZDArSfRcH_MlGhP/view?usp=sharing)
 
-### Robot image
-picture 
+### Robot image 
+![IMG_5433](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6c96d0ff-0441-4c29-a52a-4b10bfa67e1b)
 
 
 ## Added/Edited Subsystems
