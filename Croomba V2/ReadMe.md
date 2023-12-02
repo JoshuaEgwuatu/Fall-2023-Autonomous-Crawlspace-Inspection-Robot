@@ -43,15 +43,13 @@ Video of the robot click here
 picture 
 
 
-## Subsystems
+## Added/Edited Subsystems
 - Compass Subsystem - To locate the robot having the orientation and heading 
-- Revamp Chassis and Motor subsystem - upgrade the chassis to have less weight and upgrade the motor to climb issue
-
-## Cut Subsystems with explanation
-- Live Stream subsystem
-  - reason: 
-- Radon Subsystem
-  - reason:
+- Chassis and Motor subsystem - Upgrade the chassis to have less weight and upgrade the motor to climb issue
+- Live Stream subsystem - Upgrade the Image stitching program into a real-time live stream.
+   - This subsystem did not get completed/purchased due to time constraints. 
+- Radon Subsystem - Adding radon sensing capability to the Croomba
+   - This subsystem did not get completed/purchased due to the unavailability of the product.
 
     
 ## Experimentation
@@ -66,8 +64,7 @@ the maximum incline the Croomba could climb was 15 degrees. Currently, the Croom
 
 ![image](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/c9488e06-4436-4792-8eaf-fdb0fc90fd5d)
 
-Full experimentation document available click here.
-
+Full experimentation document available click [here](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/blob/959f4df5862007a06841c948a97f7c722fc72168/Croomba%20V2/Reports/Experimental%20Analysis.md)
 
 ## About Us
 ### Team 3:
@@ -78,18 +75,12 @@ Full experimentation document available click here.
 
 ## Repo Organization
 
-### Document 
-- Experimental Analysis in Documentation
-   
-### SignOffs 
-1- Environmental Sensing File: 
-- Compass Subsystem signoff
-- Radon Sensor Signoff
+### Reports
+The reports consist of Experimental Analysis, the Team Poster, Lessons Learned, and several Presentations.
 
-2- Movemnet File:
-- Revamp Chassis and Motor Signoff
+### Documentation 
+This includes the Signoffs and Final Bill of Materials.
 
 ### Software 
-- compass subsystem software in Software file in Environmental Sensing file
-- Revamp Chassis and Motor subsystem software n the Software file in the Movemnet file
+The Pseudo Code and other Software components for the project will be placed in Software. Each code directory contains a README that details a description, functions of the code, dependencies, and how to install it.
 
