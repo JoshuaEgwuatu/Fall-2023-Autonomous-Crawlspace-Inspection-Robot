@@ -28,7 +28,7 @@ This is the second version of the Autonomous Crawlspace Inspection Robot, which 
 * Supply power for consistent operation across all components
 * Robot movement through serial commands and return encoder data to the main microcontroller
 * Manual control through text-based commands while also streaming live video to the operator
-* Continuously reading and processes data to calculate the Croomba's heading.
+* Continuously reading and processing data to calculate the Croomba's heading.
 * Able to handle inclines of up to 25 degrees, with improved traction on carpeted surfaces.
 
 ## Salient Outcomes
@@ -37,7 +37,7 @@ This is the second version of the Autonomous Crawlspace Inspection Robot, which 
 
 ## Project Demonstration & Images
 ### Video of Robot at Competition
-Video of robot click here
+Video of the robot click here
 
 ### Robot image
 picture 
@@ -45,7 +45,7 @@ picture
 
 ## Subsystems
 - Compass Subsystem - To locate the robot having the orientation and heading 
-- Revamp Chassis and Motor subsystem - upgrade the chasis to have less weight and upgrade the motor to climb issue
+- Revamp Chassis and Motor subsystem - upgrade the chassis to have less weight and upgrade the motor to climb issue
 
 ## Cut Subsystems with explanation
 - Live Stream subsystem
@@ -62,24 +62,24 @@ The experimental analysis indicates that the compass, with the implemented measu
 
 
 ### Revamp Chassis and Motor Experiment
-the maximum incline the Croomba could climb was 15 degrees. Currently, the Croomba can handle 25 degrees. The Croomba was able to handle 0-10 degrees without any issues. At 15 degrees, the Croomba was not able to climb the slick wooden surface. 
+the maximum incline the Croomba could climb was 15 degrees. Currently, the Croomba can handle 25 degrees. The Croomba was able to handle 0-10 degrees without any issues. At 15 degrees, the Croomba could not climb the slick wooden surface. 
 
 ![image](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/112426690/c9488e06-4436-4792-8eaf-fdb0fc90fd5d)
 
-Full experimentation document available clicl here.
+Full experimentation document available click here.
 
 
 ## About Us
 ### Team 3:
 - Fatima Al-Heji is an undergraduate Computer Engineering student and is a senior at Tennessee Technological University.
-- Josh Egwatu is is an undergraduate Electrical Engineering student and is a senior at Tennessee Technological University.
+- Joshua Egwuatu is an undergraduate Electrical Engineering student and is a senior at Tennessee Technological University.
  ### Faculty Supervisor:
  - Mr. Jesse Roberts
 
 ## Repo Organization
 
 ### Document 
-- Experimantal Analysis in Documentation
+- Experimental Analysis in Documentation
    
 ### SignOffs 
 1- Environmental Sensing File: 
@@ -91,5 +91,5 @@ Full experimentation document available clicl here.
 
 ### Software 
 - compass subsystem software in Software file in Environmental Sensing file
-- Revamp Chassis and Motor subsystem software n Software file in Movemnet file
+- Revamp Chassis and Motor subsystem software n the Software file in the Movemnet file
 
