@@ -37,18 +37,24 @@ There are two subsystems, the Radon sensor and the live stream camera, that were
 - Implementing communication between Arduino and Raspberry Pi.
 
 
-# Team 3: your name 
+# Team 3: Joshua Egwuatu 
 
-## What went well? 
+## What went well? The compass went really well. We were able to fix an issue the previous iteration had. The motor and chassis redesign also went as well. We were able to make vast improvements on our goal for a 30-degree incline.
 
 ## What didn’t go well?
+The Croomba wasn't able to go up a 30-degree incline. We also weren't able to implement the live-stream subsystem and the radon subsystem.
 
 ## What unanticipated problems occurred?
+The Arduino 2560 ended up burning, not allowing us to do any experimentation till we got a replacement. The radon sensor wasn't currently sold. Unable to find a suitable option within our time frame.
 
 ## What would you do differently if you were to do it over again?
+I would make sure all group members are required to attend group meetings and make sure that we are all collaborating on each other's work. This is something we didn't start till later on and it would've payed off immediatley. 
 
 ## What “best practices” have you identified?
+Collaboration is key, make sure you are properly communicating with teammates. Setup multiple meeting every week to insure group members are able to make some of the time slots. Properly document your work, it makes it easier for people to underdstand what you were trying to do.
 
 ## What words of wisdom would you pass on to future students?
+Do as much as you can during Capstone I. This will help your Capsstone II experience much easier! Set hard deadlines for teammates if possible, this helps keep people accountable.
 
 ## What new knowledge or skills did you acquire throughout capstone?
+I was able to become a better communicator. I was also able to better understand terminal functions. Improved understanding of Arduino IDE. Gained more understanng on Buck converters. I was also able to improve soldering skills.
