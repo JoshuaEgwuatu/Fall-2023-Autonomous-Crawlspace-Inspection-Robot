@@ -31,13 +31,9 @@ This is the second version of the Autonomous Crawlspace Inspection Robot, which 
 * Continuously reading and processing data to calculate the Croomba's heading.
 * Able to handle inclines of up to 25 degrees, with improved traction on carpeted surfaces.
 
-## Salient Outcomes
-
-
-
 ## Project Demonstration & Images
 ### Video
-Video of the robot click [here](https://drive.google.com/file/d/1BlidPwFD-7A3Lk9YjZDArSfRcH_MlGhP/view?usp=sharing)
+For video of the Croomba click [here](https://drive.google.com/file/d/1BlidPwFD-7A3Lk9YjZDArSfRcH_MlGhP/view?usp=sharing)
 
 ### Robot image 
 ![IMG_5433](https://github.com/JoshuaEgwuatu/Fall-2023-Autonomous-Crawlspace-Inspection-Robot/assets/110966922/6c96d0ff-0441-4c29-a52a-4b10bfa67e1b)
