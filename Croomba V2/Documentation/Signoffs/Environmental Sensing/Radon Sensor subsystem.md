@@ -1,4 +1,4 @@
-The vision subsystem was cut due to not recieving sensors.
+The Radon Sensor subsystem was cut due to not recieving the sensor.
 
  
 # Radon Sensor Signoff
